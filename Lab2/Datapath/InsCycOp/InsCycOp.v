@@ -2,6 +2,7 @@ module InsCycOp(
 	input Clock, Reset, IRload, JMPmux, PCload, Meminst,
 	input [7:0]inputIR,
 	output [7:5]IR,
+	//output [7:0]outputIR,
 	output [4:0]outputMux2
 );
 	

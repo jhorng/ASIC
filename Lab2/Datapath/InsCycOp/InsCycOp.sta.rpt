@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for InsCycOp
-Mon Nov 23 17:46:30 2015
+Mon Nov 23 21:22:11 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -118,7 +118,7 @@ applicable agreement for further details.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 524.93 MHz ; 380.08 MHz      ; Clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 527.43 MHz ; 380.08 MHz      ; Clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -128,7 +128,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+---------------+
 ; Clock ; Slack  ; End Point TNS ;
 +-------+--------+---------------+
-; Clock ; -0.905 ; -3.385        ;
+; Clock ; -0.896 ; -3.328        ;
 +-------+--------+---------------+
 
 
@@ -137,7 +137,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+---------------+
 ; Clock ; Slack ; End Point TNS ;
 +-------+-------+---------------+
-; Clock ; 0.940 ; 0.000         ;
+; Clock ; 0.620 ; 0.000         ;
 +-------+-------+---------------+
 
 
@@ -167,26 +167,26 @@ No paths to report.
 +--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
-; -0.905 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.943      ;
-; -0.825 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.863      ;
-; -0.807 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.845      ;
-; -0.745 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.783      ;
-; -0.735 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.773      ;
-; -0.727 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.765      ;
-; -0.687 ; Register:PC_reg|Output[3] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.725      ;
-; -0.665 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.703      ;
-; -0.655 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.693      ;
-; -0.647 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.685      ;
-; -0.559 ; Register:IR_reg|Output[3] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.007      ; 1.604      ;
-; -0.254 ; Register:PC_reg|Output[3] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.292      ;
-; -0.252 ; Register:IR_reg|Output[4] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.001      ; 1.291      ;
-; -0.248 ; Register:IR_reg|Output[2] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 1.000        ; 0.001      ; 1.287      ;
-; -0.245 ; Register:IR_reg|Output[0] ; Register:PC_reg|Output[0] ; Clock        ; Clock       ; 1.000        ; 0.001      ; 1.284      ;
-; -0.233 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.271      ;
-; -0.224 ; Register:PC_reg|Output[4] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.262      ;
-; -0.223 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.261      ;
-; -0.215 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.253      ;
-; -0.188 ; Register:IR_reg|Output[1] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 1.000        ; 0.001      ; 1.227      ;
+; -0.896 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.934      ;
+; -0.865 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.903      ;
+; -0.816 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.854      ;
+; -0.785 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.823      ;
+; -0.736 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.774      ;
+; -0.732 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.770      ;
+; -0.705 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.743      ;
+; -0.700 ; Register:PC_reg|Output[3] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.738      ;
+; -0.656 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.694      ;
+; -0.652 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.690      ;
+; -0.272 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.310      ;
+; -0.267 ; Register:IR_reg|Output[3] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.305      ;
+; -0.267 ; Register:PC_reg|Output[3] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.305      ;
+; -0.224 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.262      ;
+; -0.220 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.258      ;
+; -0.043 ; Register:IR_reg|Output[2] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.081      ;
+; -0.043 ; Register:IR_reg|Output[4] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.081      ;
+; -0.042 ; Register:IR_reg|Output[0] ; Register:PC_reg|Output[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.080      ;
+; -0.035 ; Register:IR_reg|Output[1] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.073      ;
+; 0.132  ; Register:PC_reg|Output[4] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.906      ;
 +--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -195,26 +195,26 @@ No paths to report.
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
-; 0.940 ; Register:IR_reg|Output[1] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.227      ;
-; 0.967 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.253      ;
-; 0.975 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.261      ;
-; 0.976 ; Register:PC_reg|Output[4] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.262      ;
-; 0.985 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.271      ;
-; 0.997 ; Register:IR_reg|Output[0] ; Register:PC_reg|Output[0] ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.284      ;
-; 1.000 ; Register:IR_reg|Output[2] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.287      ;
-; 1.004 ; Register:IR_reg|Output[4] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.291      ;
-; 1.006 ; Register:PC_reg|Output[3] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.292      ;
-; 1.311 ; Register:IR_reg|Output[3] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.007      ; 1.604      ;
-; 1.399 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.685      ;
-; 1.407 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.693      ;
-; 1.417 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.703      ;
-; 1.439 ; Register:PC_reg|Output[3] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.725      ;
-; 1.479 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.765      ;
-; 1.487 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.773      ;
-; 1.497 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.783      ;
-; 1.559 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.845      ;
-; 1.577 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.863      ;
-; 1.657 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.943      ;
+; 0.620 ; Register:PC_reg|Output[4] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.906      ;
+; 0.787 ; Register:IR_reg|Output[1] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.073      ;
+; 0.794 ; Register:IR_reg|Output[0] ; Register:PC_reg|Output[0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.080      ;
+; 0.795 ; Register:IR_reg|Output[2] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.081      ;
+; 0.795 ; Register:IR_reg|Output[4] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.081      ;
+; 0.972 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.258      ;
+; 0.976 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 1.019 ; Register:PC_reg|Output[3] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.305      ;
+; 1.019 ; Register:IR_reg|Output[3] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.305      ;
+; 1.024 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.310      ;
+; 1.404 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.690      ;
+; 1.408 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.694      ;
+; 1.452 ; Register:PC_reg|Output[3] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.738      ;
+; 1.457 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.743      ;
+; 1.484 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.770      ;
+; 1.488 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.774      ;
+; 1.537 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.823      ;
+; 1.568 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.854      ;
+; 1.617 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.903      ;
+; 1.648 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.934      ;
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -290,18 +290,18 @@ No paths to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; IRload      ; Clock      ; 4.205 ; 4.205 ; Rise       ; Clock           ;
-; JMPmux      ; Clock      ; 3.880 ; 3.880 ; Rise       ; Clock           ;
-; PCload      ; Clock      ; 3.904 ; 3.904 ; Rise       ; Clock           ;
-; inputIR[*]  ; Clock      ; 3.833 ; 3.833 ; Rise       ; Clock           ;
-;  inputIR[0] ; Clock      ; 3.426 ; 3.426 ; Rise       ; Clock           ;
-;  inputIR[1] ; Clock      ; 3.811 ; 3.811 ; Rise       ; Clock           ;
-;  inputIR[2] ; Clock      ; 3.403 ; 3.403 ; Rise       ; Clock           ;
-;  inputIR[3] ; Clock      ; 3.729 ; 3.729 ; Rise       ; Clock           ;
-;  inputIR[4] ; Clock      ; 3.833 ; 3.833 ; Rise       ; Clock           ;
-;  inputIR[5] ; Clock      ; 3.454 ; 3.454 ; Rise       ; Clock           ;
-;  inputIR[6] ; Clock      ; 3.465 ; 3.465 ; Rise       ; Clock           ;
-;  inputIR[7] ; Clock      ; 3.465 ; 3.465 ; Rise       ; Clock           ;
+; IRload      ; Clock      ; 4.429 ; 4.429 ; Rise       ; Clock           ;
+; JMPmux      ; Clock      ; 4.121 ; 4.121 ; Rise       ; Clock           ;
+; PCload      ; Clock      ; 0.446 ; 0.446 ; Rise       ; Clock           ;
+; inputIR[*]  ; Clock      ; 3.775 ; 3.775 ; Rise       ; Clock           ;
+;  inputIR[0] ; Clock      ; 3.716 ; 3.716 ; Rise       ; Clock           ;
+;  inputIR[1] ; Clock      ; 3.548 ; 3.548 ; Rise       ; Clock           ;
+;  inputIR[2] ; Clock      ; 3.437 ; 3.437 ; Rise       ; Clock           ;
+;  inputIR[3] ; Clock      ; 3.594 ; 3.594 ; Rise       ; Clock           ;
+;  inputIR[4] ; Clock      ; 3.467 ; 3.467 ; Rise       ; Clock           ;
+;  inputIR[5] ; Clock      ; 3.775 ; 3.775 ; Rise       ; Clock           ;
+;  inputIR[6] ; Clock      ; 3.421 ; 3.421 ; Rise       ; Clock           ;
+;  inputIR[7] ; Clock      ; 3.491 ; 3.491 ; Rise       ; Clock           ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -310,18 +310,18 @@ No paths to report.
 +-------------+------------+--------+--------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-------------+------------+--------+--------+------------+-----------------+
-; IRload      ; Clock      ; -3.670 ; -3.670 ; Rise       ; Clock           ;
-; JMPmux      ; Clock      ; -3.632 ; -3.632 ; Rise       ; Clock           ;
-; PCload      ; Clock      ; -3.656 ; -3.656 ; Rise       ; Clock           ;
-; inputIR[*]  ; Clock      ; -3.155 ; -3.155 ; Rise       ; Clock           ;
-;  inputIR[0] ; Clock      ; -3.178 ; -3.178 ; Rise       ; Clock           ;
-;  inputIR[1] ; Clock      ; -3.563 ; -3.563 ; Rise       ; Clock           ;
-;  inputIR[2] ; Clock      ; -3.155 ; -3.155 ; Rise       ; Clock           ;
-;  inputIR[3] ; Clock      ; -3.481 ; -3.481 ; Rise       ; Clock           ;
-;  inputIR[4] ; Clock      ; -3.585 ; -3.585 ; Rise       ; Clock           ;
-;  inputIR[5] ; Clock      ; -3.206 ; -3.206 ; Rise       ; Clock           ;
-;  inputIR[6] ; Clock      ; -3.217 ; -3.217 ; Rise       ; Clock           ;
-;  inputIR[7] ; Clock      ; -3.217 ; -3.217 ; Rise       ; Clock           ;
+; IRload      ; Clock      ; -3.642 ; -3.642 ; Rise       ; Clock           ;
+; JMPmux      ; Clock      ; -3.873 ; -3.873 ; Rise       ; Clock           ;
+; PCload      ; Clock      ; -0.198 ; -0.198 ; Rise       ; Clock           ;
+; inputIR[*]  ; Clock      ; -3.173 ; -3.173 ; Rise       ; Clock           ;
+;  inputIR[0] ; Clock      ; -3.468 ; -3.468 ; Rise       ; Clock           ;
+;  inputIR[1] ; Clock      ; -3.300 ; -3.300 ; Rise       ; Clock           ;
+;  inputIR[2] ; Clock      ; -3.189 ; -3.189 ; Rise       ; Clock           ;
+;  inputIR[3] ; Clock      ; -3.346 ; -3.346 ; Rise       ; Clock           ;
+;  inputIR[4] ; Clock      ; -3.219 ; -3.219 ; Rise       ; Clock           ;
+;  inputIR[5] ; Clock      ; -3.527 ; -3.527 ; Rise       ; Clock           ;
+;  inputIR[6] ; Clock      ; -3.173 ; -3.173 ; Rise       ; Clock           ;
+;  inputIR[7] ; Clock      ; -3.243 ; -3.243 ; Rise       ; Clock           ;
 +-------------+------------+--------+--------+------------+-----------------+
 
 
@@ -330,16 +330,25 @@ No paths to report.
 +----------------+------------+-------+-------+------------+-----------------+
 ; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +----------------+------------+-------+-------+------------+-----------------+
-; IR[*]          ; Clock      ; 7.128 ; 7.128 ; Rise       ; Clock           ;
-;  IR[5]         ; Clock      ; 7.128 ; 7.128 ; Rise       ; Clock           ;
-;  IR[6]         ; Clock      ; 6.923 ; 6.923 ; Rise       ; Clock           ;
-;  IR[7]         ; Clock      ; 6.921 ; 6.921 ; Rise       ; Clock           ;
-; outputMux2[*]  ; Clock      ; 8.055 ; 8.055 ; Rise       ; Clock           ;
-;  outputMux2[0] ; Clock      ; 7.972 ; 7.972 ; Rise       ; Clock           ;
-;  outputMux2[1] ; Clock      ; 7.958 ; 7.958 ; Rise       ; Clock           ;
-;  outputMux2[2] ; Clock      ; 7.946 ; 7.946 ; Rise       ; Clock           ;
-;  outputMux2[3] ; Clock      ; 8.055 ; 8.055 ; Rise       ; Clock           ;
-;  outputMux2[4] ; Clock      ; 7.913 ; 7.913 ; Rise       ; Clock           ;
+; IR[*]          ; Clock      ; 7.428 ; 7.428 ; Rise       ; Clock           ;
+;  IR[5]         ; Clock      ; 7.428 ; 7.428 ; Rise       ; Clock           ;
+;  IR[6]         ; Clock      ; 6.892 ; 6.892 ; Rise       ; Clock           ;
+;  IR[7]         ; Clock      ; 6.947 ; 6.947 ; Rise       ; Clock           ;
+; outputIR[*]    ; Clock      ; 7.441 ; 7.441 ; Rise       ; Clock           ;
+;  outputIR[0]   ; Clock      ; 7.237 ; 7.237 ; Rise       ; Clock           ;
+;  outputIR[1]   ; Clock      ; 7.441 ; 7.441 ; Rise       ; Clock           ;
+;  outputIR[2]   ; Clock      ; 6.884 ; 6.884 ; Rise       ; Clock           ;
+;  outputIR[3]   ; Clock      ; 6.888 ; 6.888 ; Rise       ; Clock           ;
+;  outputIR[4]   ; Clock      ; 7.139 ; 7.139 ; Rise       ; Clock           ;
+;  outputIR[5]   ; Clock      ; 7.438 ; 7.438 ; Rise       ; Clock           ;
+;  outputIR[6]   ; Clock      ; 6.892 ; 6.892 ; Rise       ; Clock           ;
+;  outputIR[7]   ; Clock      ; 6.947 ; 6.947 ; Rise       ; Clock           ;
+; outputMux2[*]  ; Clock      ; 8.279 ; 8.279 ; Rise       ; Clock           ;
+;  outputMux2[0] ; Clock      ; 7.934 ; 7.934 ; Rise       ; Clock           ;
+;  outputMux2[1] ; Clock      ; 8.228 ; 8.228 ; Rise       ; Clock           ;
+;  outputMux2[2] ; Clock      ; 7.984 ; 7.984 ; Rise       ; Clock           ;
+;  outputMux2[3] ; Clock      ; 8.279 ; 8.279 ; Rise       ; Clock           ;
+;  outputMux2[4] ; Clock      ; 7.947 ; 7.947 ; Rise       ; Clock           ;
 +----------------+------------+-------+-------+------------+-----------------+
 
 
@@ -348,16 +357,25 @@ No paths to report.
 +----------------+------------+-------+-------+------------+-----------------+
 ; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +----------------+------------+-------+-------+------------+-----------------+
-; IR[*]          ; Clock      ; 6.921 ; 6.921 ; Rise       ; Clock           ;
-;  IR[5]         ; Clock      ; 7.128 ; 7.128 ; Rise       ; Clock           ;
-;  IR[6]         ; Clock      ; 6.923 ; 6.923 ; Rise       ; Clock           ;
-;  IR[7]         ; Clock      ; 6.921 ; 6.921 ; Rise       ; Clock           ;
-; outputMux2[*]  ; Clock      ; 7.482 ; 7.482 ; Rise       ; Clock           ;
-;  outputMux2[0] ; Clock      ; 7.965 ; 7.965 ; Rise       ; Clock           ;
-;  outputMux2[1] ; Clock      ; 7.929 ; 7.929 ; Rise       ; Clock           ;
-;  outputMux2[2] ; Clock      ; 7.482 ; 7.482 ; Rise       ; Clock           ;
-;  outputMux2[3] ; Clock      ; 7.752 ; 7.752 ; Rise       ; Clock           ;
-;  outputMux2[4] ; Clock      ; 7.488 ; 7.488 ; Rise       ; Clock           ;
+; IR[*]          ; Clock      ; 6.892 ; 6.892 ; Rise       ; Clock           ;
+;  IR[5]         ; Clock      ; 7.428 ; 7.428 ; Rise       ; Clock           ;
+;  IR[6]         ; Clock      ; 6.892 ; 6.892 ; Rise       ; Clock           ;
+;  IR[7]         ; Clock      ; 6.947 ; 6.947 ; Rise       ; Clock           ;
+; outputIR[*]    ; Clock      ; 6.884 ; 6.884 ; Rise       ; Clock           ;
+;  outputIR[0]   ; Clock      ; 7.237 ; 7.237 ; Rise       ; Clock           ;
+;  outputIR[1]   ; Clock      ; 7.441 ; 7.441 ; Rise       ; Clock           ;
+;  outputIR[2]   ; Clock      ; 6.884 ; 6.884 ; Rise       ; Clock           ;
+;  outputIR[3]   ; Clock      ; 6.888 ; 6.888 ; Rise       ; Clock           ;
+;  outputIR[4]   ; Clock      ; 7.139 ; 7.139 ; Rise       ; Clock           ;
+;  outputIR[5]   ; Clock      ; 7.438 ; 7.438 ; Rise       ; Clock           ;
+;  outputIR[6]   ; Clock      ; 6.892 ; 6.892 ; Rise       ; Clock           ;
+;  outputIR[7]   ; Clock      ; 6.947 ; 6.947 ; Rise       ; Clock           ;
+; outputMux2[*]  ; Clock      ; 7.529 ; 7.529 ; Rise       ; Clock           ;
+;  outputMux2[0] ; Clock      ; 7.529 ; 7.529 ; Rise       ; Clock           ;
+;  outputMux2[1] ; Clock      ; 8.050 ; 8.050 ; Rise       ; Clock           ;
+;  outputMux2[2] ; Clock      ; 7.805 ; 7.805 ; Rise       ; Clock           ;
+;  outputMux2[3] ; Clock      ; 7.800 ; 7.800 ; Rise       ; Clock           ;
+;  outputMux2[4] ; Clock      ; 7.770 ; 7.770 ; Rise       ; Clock           ;
 +----------------+------------+-------+-------+------------+-----------------+
 
 
@@ -366,11 +384,11 @@ No paths to report.
 +------------+---------------+--------+--------+--------+--------+
 ; Input Port ; Output Port   ; RR     ; RF     ; FR     ; FF     ;
 +------------+---------------+--------+--------+--------+--------+
-; Meminst    ; outputMux2[0] ; 10.497 ; 10.497 ; 10.497 ; 10.497 ;
-; Meminst    ; outputMux2[1] ; 10.518 ; 10.518 ; 10.518 ; 10.518 ;
-; Meminst    ; outputMux2[2] ; 10.225 ; 10.225 ; 10.225 ; 10.225 ;
-; Meminst    ; outputMux2[3] ; 10.267 ; 10.267 ; 10.267 ; 10.267 ;
-; Meminst    ; outputMux2[4] ; 10.234 ; 10.234 ; 10.234 ; 10.234 ;
+; Meminst    ; outputMux2[0] ; 10.228 ; 10.228 ; 10.228 ; 10.228 ;
+; Meminst    ; outputMux2[1] ; 10.503 ; 10.503 ; 10.503 ; 10.503 ;
+; Meminst    ; outputMux2[2] ; 10.505 ; 10.505 ; 10.505 ; 10.505 ;
+; Meminst    ; outputMux2[3] ; 10.510 ; 10.510 ; 10.510 ; 10.510 ;
+; Meminst    ; outputMux2[4] ; 10.469 ; 10.469 ; 10.469 ; 10.469 ;
 +------------+---------------+--------+--------+--------+--------+
 
 
@@ -379,11 +397,11 @@ No paths to report.
 +------------+---------------+--------+--------+--------+--------+
 ; Input Port ; Output Port   ; RR     ; RF     ; FR     ; FF     ;
 +------------+---------------+--------+--------+--------+--------+
-; Meminst    ; outputMux2[0] ; 10.497 ; 10.497 ; 10.497 ; 10.497 ;
-; Meminst    ; outputMux2[1] ; 10.518 ; 10.518 ; 10.518 ; 10.518 ;
-; Meminst    ; outputMux2[2] ; 10.225 ; 10.225 ; 10.225 ; 10.225 ;
-; Meminst    ; outputMux2[3] ; 10.267 ; 10.267 ; 10.267 ; 10.267 ;
-; Meminst    ; outputMux2[4] ; 10.234 ; 10.234 ; 10.234 ; 10.234 ;
+; Meminst    ; outputMux2[0] ; 10.228 ; 10.228 ; 10.228 ; 10.228 ;
+; Meminst    ; outputMux2[1] ; 10.503 ; 10.503 ; 10.503 ; 10.503 ;
+; Meminst    ; outputMux2[2] ; 10.505 ; 10.505 ; 10.505 ; 10.505 ;
+; Meminst    ; outputMux2[3] ; 10.510 ; 10.510 ; 10.510 ; 10.510 ;
+; Meminst    ; outputMux2[4] ; 10.469 ; 10.469 ; 10.469 ; 10.469 ;
 +------------+---------------+--------+--------+--------+--------+
 
 
@@ -392,7 +410,7 @@ No paths to report.
 +-------+-------+---------------+
 ; Clock ; Slack ; End Point TNS ;
 +-------+-------+---------------+
-; Clock ; 0.271 ; 0.000         ;
+; Clock ; 0.277 ; 0.000         ;
 +-------+-------+---------------+
 
 
@@ -401,7 +419,7 @@ No paths to report.
 +-------+-------+---------------+
 ; Clock ; Slack ; End Point TNS ;
 +-------+-------+---------------+
-; Clock ; 0.357 ; 0.000         ;
+; Clock ; 0.240 ; 0.000         ;
 +-------+-------+---------------+
 
 
@@ -431,26 +449,26 @@ No paths to report.
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
-; 0.271 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.761      ;
-; 0.306 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.726      ;
-; 0.315 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.717      ;
-; 0.341 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.691      ;
-; 0.345 ; Register:IR_reg|Output[3] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.006      ; 0.693      ;
-; 0.345 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.687      ;
-; 0.350 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.682      ;
-; 0.372 ; Register:PC_reg|Output[3] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.660      ;
-; 0.376 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.656      ;
-; 0.380 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.652      ;
-; 0.385 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.647      ;
-; 0.467 ; Register:IR_reg|Output[4] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.001      ; 0.566      ;
-; 0.471 ; Register:IR_reg|Output[0] ; Register:PC_reg|Output[0] ; Clock        ; Clock       ; 1.000        ; 0.001      ; 0.562      ;
-; 0.471 ; Register:IR_reg|Output[2] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 1.000        ; 0.001      ; 0.562      ;
-; 0.480 ; Register:IR_reg|Output[1] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 1.000        ; 0.001      ; 0.553      ;
-; 0.512 ; Register:PC_reg|Output[3] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.520      ;
-; 0.514 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.518      ;
-; 0.517 ; Register:PC_reg|Output[4] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.515      ;
-; 0.518 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.514      ;
-; 0.523 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.509      ;
+; 0.277 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.755      ;
+; 0.294 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.738      ;
+; 0.312 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.720      ;
+; 0.329 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.703      ;
+; 0.347 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.685      ;
+; 0.347 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.685      ;
+; 0.363 ; Register:PC_reg|Output[3] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.669      ;
+; 0.364 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.668      ;
+; 0.382 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.650      ;
+; 0.382 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.650      ;
+; 0.456 ; Register:IR_reg|Output[3] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.576      ;
+; 0.503 ; Register:PC_reg|Output[3] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.529      ;
+; 0.504 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.528      ;
+; 0.520 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.512      ;
+; 0.520 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.512      ;
+; 0.538 ; Register:IR_reg|Output[0] ; Register:PC_reg|Output[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.494      ;
+; 0.538 ; Register:IR_reg|Output[2] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.494      ;
+; 0.538 ; Register:IR_reg|Output[4] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.494      ;
+; 0.545 ; Register:IR_reg|Output[1] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.487      ;
+; 0.640 ; Register:PC_reg|Output[4] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.392      ;
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -459,26 +477,26 @@ No paths to report.
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
-; 0.357 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.509      ;
-; 0.362 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.514      ;
-; 0.363 ; Register:PC_reg|Output[4] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.515      ;
-; 0.366 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.518      ;
-; 0.368 ; Register:PC_reg|Output[3] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.520      ;
-; 0.400 ; Register:IR_reg|Output[1] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 0.000        ; 0.001      ; 0.553      ;
-; 0.409 ; Register:IR_reg|Output[0] ; Register:PC_reg|Output[0] ; Clock        ; Clock       ; 0.000        ; 0.001      ; 0.562      ;
-; 0.409 ; Register:IR_reg|Output[2] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 0.000        ; 0.001      ; 0.562      ;
-; 0.413 ; Register:IR_reg|Output[4] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.001      ; 0.566      ;
-; 0.495 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.647      ;
-; 0.500 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.652      ;
-; 0.504 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.656      ;
-; 0.508 ; Register:PC_reg|Output[3] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.660      ;
-; 0.530 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.682      ;
-; 0.535 ; Register:IR_reg|Output[3] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.006      ; 0.693      ;
-; 0.535 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.687      ;
-; 0.539 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.691      ;
-; 0.565 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.717      ;
-; 0.574 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.726      ;
-; 0.609 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.761      ;
+; 0.240 ; Register:PC_reg|Output[4] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.392      ;
+; 0.335 ; Register:IR_reg|Output[1] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.487      ;
+; 0.342 ; Register:IR_reg|Output[0] ; Register:PC_reg|Output[0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.494      ;
+; 0.342 ; Register:IR_reg|Output[2] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.494      ;
+; 0.342 ; Register:IR_reg|Output[4] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.494      ;
+; 0.360 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.376 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.528      ;
+; 0.377 ; Register:PC_reg|Output[3] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.529      ;
+; 0.424 ; Register:IR_reg|Output[3] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.576      ;
+; 0.498 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.650      ;
+; 0.516 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.668      ;
+; 0.517 ; Register:PC_reg|Output[3] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.669      ;
+; 0.533 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; Register:PC_reg|Output[2] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.685      ;
+; 0.551 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.703      ;
+; 0.568 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.720      ;
+; 0.586 ; Register:PC_reg|Output[1] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.738      ;
+; 0.603 ; Register:PC_reg|Output[0] ; Register:PC_reg|Output[4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.755      ;
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -549,24 +567,24 @@ No paths to report.
 +--------+--------------+----------------+------------------+-------+------------+---------------------------+
 
 
-+-------------------------------------------------------------------------+
-; Setup Times                                                             ;
-+-------------+------------+-------+-------+------------+-----------------+
-; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-------------+------------+-------+-------+------------+-----------------+
-; IRload      ; Clock      ; 1.940 ; 1.940 ; Rise       ; Clock           ;
-; JMPmux      ; Clock      ; 1.784 ; 1.784 ; Rise       ; Clock           ;
-; PCload      ; Clock      ; 1.814 ; 1.814 ; Rise       ; Clock           ;
-; inputIR[*]  ; Clock      ; 1.726 ; 1.726 ; Rise       ; Clock           ;
-;  inputIR[0] ; Clock      ; 1.531 ; 1.531 ; Rise       ; Clock           ;
-;  inputIR[1] ; Clock      ; 1.713 ; 1.713 ; Rise       ; Clock           ;
-;  inputIR[2] ; Clock      ; 1.547 ; 1.547 ; Rise       ; Clock           ;
-;  inputIR[3] ; Clock      ; 1.653 ; 1.653 ; Rise       ; Clock           ;
-;  inputIR[4] ; Clock      ; 1.726 ; 1.726 ; Rise       ; Clock           ;
-;  inputIR[5] ; Clock      ; 1.556 ; 1.556 ; Rise       ; Clock           ;
-;  inputIR[6] ; Clock      ; 1.567 ; 1.567 ; Rise       ; Clock           ;
-;  inputIR[7] ; Clock      ; 1.566 ; 1.566 ; Rise       ; Clock           ;
-+-------------+------------+-------+-------+------------+-----------------+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; IRload      ; Clock      ; 2.006  ; 2.006  ; Rise       ; Clock           ;
+; JMPmux      ; Clock      ; 1.858  ; 1.858  ; Rise       ; Clock           ;
+; PCload      ; Clock      ; -0.246 ; -0.246 ; Rise       ; Clock           ;
+; inputIR[*]  ; Clock      ; 1.690  ; 1.690  ; Rise       ; Clock           ;
+;  inputIR[0] ; Clock      ; 1.654  ; 1.654  ; Rise       ; Clock           ;
+;  inputIR[1] ; Clock      ; 1.619  ; 1.619  ; Rise       ; Clock           ;
+;  inputIR[2] ; Clock      ; 1.542  ; 1.542  ; Rise       ; Clock           ;
+;  inputIR[3] ; Clock      ; 1.647  ; 1.647  ; Rise       ; Clock           ;
+;  inputIR[4] ; Clock      ; 1.563  ; 1.563  ; Rise       ; Clock           ;
+;  inputIR[5] ; Clock      ; 1.690  ; 1.690  ; Rise       ; Clock           ;
+;  inputIR[6] ; Clock      ; 1.530  ; 1.530  ; Rise       ; Clock           ;
+;  inputIR[7] ; Clock      ; 1.582  ; 1.582  ; Rise       ; Clock           ;
++-------------+------------+--------+--------+------------+-----------------+
 
 
 +---------------------------------------------------------------------------+
@@ -574,18 +592,18 @@ No paths to report.
 +-------------+------------+--------+--------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-------------+------------+--------+--------+------------+-----------------+
-; IRload      ; Clock      ; -1.710 ; -1.710 ; Rise       ; Clock           ;
-; JMPmux      ; Clock      ; -1.664 ; -1.664 ; Rise       ; Clock           ;
-; PCload      ; Clock      ; -1.694 ; -1.694 ; Rise       ; Clock           ;
-; inputIR[*]  ; Clock      ; -1.411 ; -1.411 ; Rise       ; Clock           ;
-;  inputIR[0] ; Clock      ; -1.411 ; -1.411 ; Rise       ; Clock           ;
-;  inputIR[1] ; Clock      ; -1.593 ; -1.593 ; Rise       ; Clock           ;
-;  inputIR[2] ; Clock      ; -1.427 ; -1.427 ; Rise       ; Clock           ;
-;  inputIR[3] ; Clock      ; -1.533 ; -1.533 ; Rise       ; Clock           ;
-;  inputIR[4] ; Clock      ; -1.606 ; -1.606 ; Rise       ; Clock           ;
-;  inputIR[5] ; Clock      ; -1.436 ; -1.436 ; Rise       ; Clock           ;
-;  inputIR[6] ; Clock      ; -1.447 ; -1.447 ; Rise       ; Clock           ;
-;  inputIR[7] ; Clock      ; -1.446 ; -1.446 ; Rise       ; Clock           ;
+; IRload      ; Clock      ; -1.686 ; -1.686 ; Rise       ; Clock           ;
+; JMPmux      ; Clock      ; -1.738 ; -1.738 ; Rise       ; Clock           ;
+; PCload      ; Clock      ; 0.366  ; 0.366  ; Rise       ; Clock           ;
+; inputIR[*]  ; Clock      ; -1.410 ; -1.410 ; Rise       ; Clock           ;
+;  inputIR[0] ; Clock      ; -1.534 ; -1.534 ; Rise       ; Clock           ;
+;  inputIR[1] ; Clock      ; -1.499 ; -1.499 ; Rise       ; Clock           ;
+;  inputIR[2] ; Clock      ; -1.422 ; -1.422 ; Rise       ; Clock           ;
+;  inputIR[3] ; Clock      ; -1.527 ; -1.527 ; Rise       ; Clock           ;
+;  inputIR[4] ; Clock      ; -1.443 ; -1.443 ; Rise       ; Clock           ;
+;  inputIR[5] ; Clock      ; -1.570 ; -1.570 ; Rise       ; Clock           ;
+;  inputIR[6] ; Clock      ; -1.410 ; -1.410 ; Rise       ; Clock           ;
+;  inputIR[7] ; Clock      ; -1.462 ; -1.462 ; Rise       ; Clock           ;
 +-------------+------------+--------+--------+------------+-----------------+
 
 
@@ -594,16 +612,25 @@ No paths to report.
 +----------------+------------+-------+-------+------------+-----------------+
 ; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +----------------+------------+-------+-------+------------+-----------------+
-; IR[*]          ; Clock      ; 3.842 ; 3.842 ; Rise       ; Clock           ;
-;  IR[5]         ; Clock      ; 3.842 ; 3.842 ; Rise       ; Clock           ;
-;  IR[6]         ; Clock      ; 3.783 ; 3.783 ; Rise       ; Clock           ;
-;  IR[7]         ; Clock      ; 3.782 ; 3.782 ; Rise       ; Clock           ;
-; outputMux2[*]  ; Clock      ; 4.205 ; 4.205 ; Rise       ; Clock           ;
-;  outputMux2[0] ; Clock      ; 4.143 ; 4.143 ; Rise       ; Clock           ;
-;  outputMux2[1] ; Clock      ; 4.143 ; 4.143 ; Rise       ; Clock           ;
-;  outputMux2[2] ; Clock      ; 4.121 ; 4.121 ; Rise       ; Clock           ;
-;  outputMux2[3] ; Clock      ; 4.205 ; 4.205 ; Rise       ; Clock           ;
-;  outputMux2[4] ; Clock      ; 4.123 ; 4.123 ; Rise       ; Clock           ;
+; IR[*]          ; Clock      ; 3.974 ; 3.974 ; Rise       ; Clock           ;
+;  IR[5]         ; Clock      ; 3.974 ; 3.974 ; Rise       ; Clock           ;
+;  IR[6]         ; Clock      ; 3.777 ; 3.777 ; Rise       ; Clock           ;
+;  IR[7]         ; Clock      ; 3.804 ; 3.804 ; Rise       ; Clock           ;
+; outputIR[*]    ; Clock      ; 3.984 ; 3.984 ; Rise       ; Clock           ;
+;  outputIR[0]   ; Clock      ; 3.911 ; 3.911 ; Rise       ; Clock           ;
+;  outputIR[1]   ; Clock      ; 3.981 ; 3.981 ; Rise       ; Clock           ;
+;  outputIR[2]   ; Clock      ; 3.760 ; 3.760 ; Rise       ; Clock           ;
+;  outputIR[3]   ; Clock      ; 3.770 ; 3.770 ; Rise       ; Clock           ;
+;  outputIR[4]   ; Clock      ; 3.847 ; 3.847 ; Rise       ; Clock           ;
+;  outputIR[5]   ; Clock      ; 3.984 ; 3.984 ; Rise       ; Clock           ;
+;  outputIR[6]   ; Clock      ; 3.777 ; 3.777 ; Rise       ; Clock           ;
+;  outputIR[7]   ; Clock      ; 3.804 ; 3.804 ; Rise       ; Clock           ;
+; outputMux2[*]  ; Clock      ; 4.276 ; 4.276 ; Rise       ; Clock           ;
+;  outputMux2[0] ; Clock      ; 4.132 ; 4.132 ; Rise       ; Clock           ;
+;  outputMux2[1] ; Clock      ; 4.251 ; 4.251 ; Rise       ; Clock           ;
+;  outputMux2[2] ; Clock      ; 4.154 ; 4.154 ; Rise       ; Clock           ;
+;  outputMux2[3] ; Clock      ; 4.276 ; 4.276 ; Rise       ; Clock           ;
+;  outputMux2[4] ; Clock      ; 4.127 ; 4.127 ; Rise       ; Clock           ;
 +----------------+------------+-------+-------+------------+-----------------+
 
 
@@ -612,16 +639,25 @@ No paths to report.
 +----------------+------------+-------+-------+------------+-----------------+
 ; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +----------------+------------+-------+-------+------------+-----------------+
-; IR[*]          ; Clock      ; 3.782 ; 3.782 ; Rise       ; Clock           ;
-;  IR[5]         ; Clock      ; 3.842 ; 3.842 ; Rise       ; Clock           ;
-;  IR[6]         ; Clock      ; 3.783 ; 3.783 ; Rise       ; Clock           ;
-;  IR[7]         ; Clock      ; 3.782 ; 3.782 ; Rise       ; Clock           ;
-; outputMux2[*]  ; Clock      ; 3.955 ; 3.955 ; Rise       ; Clock           ;
-;  outputMux2[0] ; Clock      ; 4.138 ; 4.138 ; Rise       ; Clock           ;
-;  outputMux2[1] ; Clock      ; 4.137 ; 4.137 ; Rise       ; Clock           ;
-;  outputMux2[2] ; Clock      ; 3.955 ; 3.955 ; Rise       ; Clock           ;
-;  outputMux2[3] ; Clock      ; 4.071 ; 4.071 ; Rise       ; Clock           ;
-;  outputMux2[4] ; Clock      ; 3.966 ; 3.966 ; Rise       ; Clock           ;
+; IR[*]          ; Clock      ; 3.777 ; 3.777 ; Rise       ; Clock           ;
+;  IR[5]         ; Clock      ; 3.974 ; 3.974 ; Rise       ; Clock           ;
+;  IR[6]         ; Clock      ; 3.777 ; 3.777 ; Rise       ; Clock           ;
+;  IR[7]         ; Clock      ; 3.804 ; 3.804 ; Rise       ; Clock           ;
+; outputIR[*]    ; Clock      ; 3.760 ; 3.760 ; Rise       ; Clock           ;
+;  outputIR[0]   ; Clock      ; 3.911 ; 3.911 ; Rise       ; Clock           ;
+;  outputIR[1]   ; Clock      ; 3.981 ; 3.981 ; Rise       ; Clock           ;
+;  outputIR[2]   ; Clock      ; 3.760 ; 3.760 ; Rise       ; Clock           ;
+;  outputIR[3]   ; Clock      ; 3.770 ; 3.770 ; Rise       ; Clock           ;
+;  outputIR[4]   ; Clock      ; 3.847 ; 3.847 ; Rise       ; Clock           ;
+;  outputIR[5]   ; Clock      ; 3.984 ; 3.984 ; Rise       ; Clock           ;
+;  outputIR[6]   ; Clock      ; 3.777 ; 3.777 ; Rise       ; Clock           ;
+;  outputIR[7]   ; Clock      ; 3.804 ; 3.804 ; Rise       ; Clock           ;
+; outputMux2[*]  ; Clock      ; 3.998 ; 3.998 ; Rise       ; Clock           ;
+;  outputMux2[0] ; Clock      ; 3.998 ; 3.998 ; Rise       ; Clock           ;
+;  outputMux2[1] ; Clock      ; 4.192 ; 4.192 ; Rise       ; Clock           ;
+;  outputMux2[2] ; Clock      ; 4.099 ; 4.099 ; Rise       ; Clock           ;
+;  outputMux2[3] ; Clock      ; 4.100 ; 4.100 ; Rise       ; Clock           ;
+;  outputMux2[4] ; Clock      ; 4.072 ; 4.072 ; Rise       ; Clock           ;
 +----------------+------------+-------+-------+------------+-----------------+
 
 
@@ -630,11 +666,11 @@ No paths to report.
 +------------+---------------+-------+-------+-------+-------+
 ; Input Port ; Output Port   ; RR    ; RF    ; FR    ; FF    ;
 +------------+---------------+-------+-------+-------+-------+
-; Meminst    ; outputMux2[0] ; 5.329 ; 5.329 ; 5.329 ; 5.329 ;
-; Meminst    ; outputMux2[1] ; 5.346 ; 5.346 ; 5.346 ; 5.346 ;
-; Meminst    ; outputMux2[2] ; 5.223 ; 5.223 ; 5.223 ; 5.223 ;
-; Meminst    ; outputMux2[3] ; 5.266 ; 5.266 ; 5.266 ; 5.266 ;
-; Meminst    ; outputMux2[4] ; 5.236 ; 5.236 ; 5.236 ; 5.236 ;
+; Meminst    ; outputMux2[0] ; 5.232 ; 5.232 ; 5.232 ; 5.232 ;
+; Meminst    ; outputMux2[1] ; 5.335 ; 5.335 ; 5.335 ; 5.335 ;
+; Meminst    ; outputMux2[2] ; 5.333 ; 5.333 ; 5.333 ; 5.333 ;
+; Meminst    ; outputMux2[3] ; 5.343 ; 5.343 ; 5.343 ; 5.343 ;
+; Meminst    ; outputMux2[4] ; 5.306 ; 5.306 ; 5.306 ; 5.306 ;
 +------------+---------------+-------+-------+-------+-------+
 
 
@@ -643,11 +679,11 @@ No paths to report.
 +------------+---------------+-------+-------+-------+-------+
 ; Input Port ; Output Port   ; RR    ; RF    ; FR    ; FF    ;
 +------------+---------------+-------+-------+-------+-------+
-; Meminst    ; outputMux2[0] ; 5.329 ; 5.329 ; 5.329 ; 5.329 ;
-; Meminst    ; outputMux2[1] ; 5.346 ; 5.346 ; 5.346 ; 5.346 ;
-; Meminst    ; outputMux2[2] ; 5.223 ; 5.223 ; 5.223 ; 5.223 ;
-; Meminst    ; outputMux2[3] ; 5.266 ; 5.266 ; 5.266 ; 5.266 ;
-; Meminst    ; outputMux2[4] ; 5.236 ; 5.236 ; 5.236 ; 5.236 ;
+; Meminst    ; outputMux2[0] ; 5.232 ; 5.232 ; 5.232 ; 5.232 ;
+; Meminst    ; outputMux2[1] ; 5.335 ; 5.335 ; 5.335 ; 5.335 ;
+; Meminst    ; outputMux2[2] ; 5.333 ; 5.333 ; 5.333 ; 5.333 ;
+; Meminst    ; outputMux2[3] ; 5.343 ; 5.343 ; 5.343 ; 5.343 ;
+; Meminst    ; outputMux2[4] ; 5.306 ; 5.306 ; 5.306 ; 5.306 ;
 +------------+---------------+-------+-------+-------+-------+
 
 
@@ -656,10 +692,10 @@ No paths to report.
 +------------------+--------+-------+----------+---------+---------------------+
 ; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -0.905 ; 0.357 ; N/A      ; N/A     ; -1.631              ;
-;  Clock           ; -0.905 ; 0.357 ; N/A      ; N/A     ; -1.631              ;
-; Design-wide TNS  ; -3.385 ; 0.0   ; 0.0      ; 0.0     ; -17.517             ;
-;  Clock           ; -3.385 ; 0.000 ; N/A      ; N/A     ; -17.517             ;
+; Worst-case Slack ; -0.896 ; 0.240 ; N/A      ; N/A     ; -1.631              ;
+;  Clock           ; -0.896 ; 0.240 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -3.328 ; 0.0   ; 0.0      ; 0.0     ; -17.517             ;
+;  Clock           ; -3.328 ; 0.000 ; N/A      ; N/A     ; -17.517             ;
 +------------------+--------+-------+----------+---------+---------------------+
 
 
@@ -668,18 +704,18 @@ No paths to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; IRload      ; Clock      ; 4.205 ; 4.205 ; Rise       ; Clock           ;
-; JMPmux      ; Clock      ; 3.880 ; 3.880 ; Rise       ; Clock           ;
-; PCload      ; Clock      ; 3.904 ; 3.904 ; Rise       ; Clock           ;
-; inputIR[*]  ; Clock      ; 3.833 ; 3.833 ; Rise       ; Clock           ;
-;  inputIR[0] ; Clock      ; 3.426 ; 3.426 ; Rise       ; Clock           ;
-;  inputIR[1] ; Clock      ; 3.811 ; 3.811 ; Rise       ; Clock           ;
-;  inputIR[2] ; Clock      ; 3.403 ; 3.403 ; Rise       ; Clock           ;
-;  inputIR[3] ; Clock      ; 3.729 ; 3.729 ; Rise       ; Clock           ;
-;  inputIR[4] ; Clock      ; 3.833 ; 3.833 ; Rise       ; Clock           ;
-;  inputIR[5] ; Clock      ; 3.454 ; 3.454 ; Rise       ; Clock           ;
-;  inputIR[6] ; Clock      ; 3.465 ; 3.465 ; Rise       ; Clock           ;
-;  inputIR[7] ; Clock      ; 3.465 ; 3.465 ; Rise       ; Clock           ;
+; IRload      ; Clock      ; 4.429 ; 4.429 ; Rise       ; Clock           ;
+; JMPmux      ; Clock      ; 4.121 ; 4.121 ; Rise       ; Clock           ;
+; PCload      ; Clock      ; 0.446 ; 0.446 ; Rise       ; Clock           ;
+; inputIR[*]  ; Clock      ; 3.775 ; 3.775 ; Rise       ; Clock           ;
+;  inputIR[0] ; Clock      ; 3.716 ; 3.716 ; Rise       ; Clock           ;
+;  inputIR[1] ; Clock      ; 3.548 ; 3.548 ; Rise       ; Clock           ;
+;  inputIR[2] ; Clock      ; 3.437 ; 3.437 ; Rise       ; Clock           ;
+;  inputIR[3] ; Clock      ; 3.594 ; 3.594 ; Rise       ; Clock           ;
+;  inputIR[4] ; Clock      ; 3.467 ; 3.467 ; Rise       ; Clock           ;
+;  inputIR[5] ; Clock      ; 3.775 ; 3.775 ; Rise       ; Clock           ;
+;  inputIR[6] ; Clock      ; 3.421 ; 3.421 ; Rise       ; Clock           ;
+;  inputIR[7] ; Clock      ; 3.491 ; 3.491 ; Rise       ; Clock           ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -688,18 +724,18 @@ No paths to report.
 +-------------+------------+--------+--------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-------------+------------+--------+--------+------------+-----------------+
-; IRload      ; Clock      ; -1.710 ; -1.710 ; Rise       ; Clock           ;
-; JMPmux      ; Clock      ; -1.664 ; -1.664 ; Rise       ; Clock           ;
-; PCload      ; Clock      ; -1.694 ; -1.694 ; Rise       ; Clock           ;
-; inputIR[*]  ; Clock      ; -1.411 ; -1.411 ; Rise       ; Clock           ;
-;  inputIR[0] ; Clock      ; -1.411 ; -1.411 ; Rise       ; Clock           ;
-;  inputIR[1] ; Clock      ; -1.593 ; -1.593 ; Rise       ; Clock           ;
-;  inputIR[2] ; Clock      ; -1.427 ; -1.427 ; Rise       ; Clock           ;
-;  inputIR[3] ; Clock      ; -1.533 ; -1.533 ; Rise       ; Clock           ;
-;  inputIR[4] ; Clock      ; -1.606 ; -1.606 ; Rise       ; Clock           ;
-;  inputIR[5] ; Clock      ; -1.436 ; -1.436 ; Rise       ; Clock           ;
-;  inputIR[6] ; Clock      ; -1.447 ; -1.447 ; Rise       ; Clock           ;
-;  inputIR[7] ; Clock      ; -1.446 ; -1.446 ; Rise       ; Clock           ;
+; IRload      ; Clock      ; -1.686 ; -1.686 ; Rise       ; Clock           ;
+; JMPmux      ; Clock      ; -1.738 ; -1.738 ; Rise       ; Clock           ;
+; PCload      ; Clock      ; 0.366  ; 0.366  ; Rise       ; Clock           ;
+; inputIR[*]  ; Clock      ; -1.410 ; -1.410 ; Rise       ; Clock           ;
+;  inputIR[0] ; Clock      ; -1.534 ; -1.534 ; Rise       ; Clock           ;
+;  inputIR[1] ; Clock      ; -1.499 ; -1.499 ; Rise       ; Clock           ;
+;  inputIR[2] ; Clock      ; -1.422 ; -1.422 ; Rise       ; Clock           ;
+;  inputIR[3] ; Clock      ; -1.527 ; -1.527 ; Rise       ; Clock           ;
+;  inputIR[4] ; Clock      ; -1.443 ; -1.443 ; Rise       ; Clock           ;
+;  inputIR[5] ; Clock      ; -1.570 ; -1.570 ; Rise       ; Clock           ;
+;  inputIR[6] ; Clock      ; -1.410 ; -1.410 ; Rise       ; Clock           ;
+;  inputIR[7] ; Clock      ; -1.462 ; -1.462 ; Rise       ; Clock           ;
 +-------------+------------+--------+--------+------------+-----------------+
 
 
@@ -708,16 +744,25 @@ No paths to report.
 +----------------+------------+-------+-------+------------+-----------------+
 ; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +----------------+------------+-------+-------+------------+-----------------+
-; IR[*]          ; Clock      ; 7.128 ; 7.128 ; Rise       ; Clock           ;
-;  IR[5]         ; Clock      ; 7.128 ; 7.128 ; Rise       ; Clock           ;
-;  IR[6]         ; Clock      ; 6.923 ; 6.923 ; Rise       ; Clock           ;
-;  IR[7]         ; Clock      ; 6.921 ; 6.921 ; Rise       ; Clock           ;
-; outputMux2[*]  ; Clock      ; 8.055 ; 8.055 ; Rise       ; Clock           ;
-;  outputMux2[0] ; Clock      ; 7.972 ; 7.972 ; Rise       ; Clock           ;
-;  outputMux2[1] ; Clock      ; 7.958 ; 7.958 ; Rise       ; Clock           ;
-;  outputMux2[2] ; Clock      ; 7.946 ; 7.946 ; Rise       ; Clock           ;
-;  outputMux2[3] ; Clock      ; 8.055 ; 8.055 ; Rise       ; Clock           ;
-;  outputMux2[4] ; Clock      ; 7.913 ; 7.913 ; Rise       ; Clock           ;
+; IR[*]          ; Clock      ; 7.428 ; 7.428 ; Rise       ; Clock           ;
+;  IR[5]         ; Clock      ; 7.428 ; 7.428 ; Rise       ; Clock           ;
+;  IR[6]         ; Clock      ; 6.892 ; 6.892 ; Rise       ; Clock           ;
+;  IR[7]         ; Clock      ; 6.947 ; 6.947 ; Rise       ; Clock           ;
+; outputIR[*]    ; Clock      ; 7.441 ; 7.441 ; Rise       ; Clock           ;
+;  outputIR[0]   ; Clock      ; 7.237 ; 7.237 ; Rise       ; Clock           ;
+;  outputIR[1]   ; Clock      ; 7.441 ; 7.441 ; Rise       ; Clock           ;
+;  outputIR[2]   ; Clock      ; 6.884 ; 6.884 ; Rise       ; Clock           ;
+;  outputIR[3]   ; Clock      ; 6.888 ; 6.888 ; Rise       ; Clock           ;
+;  outputIR[4]   ; Clock      ; 7.139 ; 7.139 ; Rise       ; Clock           ;
+;  outputIR[5]   ; Clock      ; 7.438 ; 7.438 ; Rise       ; Clock           ;
+;  outputIR[6]   ; Clock      ; 6.892 ; 6.892 ; Rise       ; Clock           ;
+;  outputIR[7]   ; Clock      ; 6.947 ; 6.947 ; Rise       ; Clock           ;
+; outputMux2[*]  ; Clock      ; 8.279 ; 8.279 ; Rise       ; Clock           ;
+;  outputMux2[0] ; Clock      ; 7.934 ; 7.934 ; Rise       ; Clock           ;
+;  outputMux2[1] ; Clock      ; 8.228 ; 8.228 ; Rise       ; Clock           ;
+;  outputMux2[2] ; Clock      ; 7.984 ; 7.984 ; Rise       ; Clock           ;
+;  outputMux2[3] ; Clock      ; 8.279 ; 8.279 ; Rise       ; Clock           ;
+;  outputMux2[4] ; Clock      ; 7.947 ; 7.947 ; Rise       ; Clock           ;
 +----------------+------------+-------+-------+------------+-----------------+
 
 
@@ -726,16 +771,25 @@ No paths to report.
 +----------------+------------+-------+-------+------------+-----------------+
 ; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +----------------+------------+-------+-------+------------+-----------------+
-; IR[*]          ; Clock      ; 3.782 ; 3.782 ; Rise       ; Clock           ;
-;  IR[5]         ; Clock      ; 3.842 ; 3.842 ; Rise       ; Clock           ;
-;  IR[6]         ; Clock      ; 3.783 ; 3.783 ; Rise       ; Clock           ;
-;  IR[7]         ; Clock      ; 3.782 ; 3.782 ; Rise       ; Clock           ;
-; outputMux2[*]  ; Clock      ; 3.955 ; 3.955 ; Rise       ; Clock           ;
-;  outputMux2[0] ; Clock      ; 4.138 ; 4.138 ; Rise       ; Clock           ;
-;  outputMux2[1] ; Clock      ; 4.137 ; 4.137 ; Rise       ; Clock           ;
-;  outputMux2[2] ; Clock      ; 3.955 ; 3.955 ; Rise       ; Clock           ;
-;  outputMux2[3] ; Clock      ; 4.071 ; 4.071 ; Rise       ; Clock           ;
-;  outputMux2[4] ; Clock      ; 3.966 ; 3.966 ; Rise       ; Clock           ;
+; IR[*]          ; Clock      ; 3.777 ; 3.777 ; Rise       ; Clock           ;
+;  IR[5]         ; Clock      ; 3.974 ; 3.974 ; Rise       ; Clock           ;
+;  IR[6]         ; Clock      ; 3.777 ; 3.777 ; Rise       ; Clock           ;
+;  IR[7]         ; Clock      ; 3.804 ; 3.804 ; Rise       ; Clock           ;
+; outputIR[*]    ; Clock      ; 3.760 ; 3.760 ; Rise       ; Clock           ;
+;  outputIR[0]   ; Clock      ; 3.911 ; 3.911 ; Rise       ; Clock           ;
+;  outputIR[1]   ; Clock      ; 3.981 ; 3.981 ; Rise       ; Clock           ;
+;  outputIR[2]   ; Clock      ; 3.760 ; 3.760 ; Rise       ; Clock           ;
+;  outputIR[3]   ; Clock      ; 3.770 ; 3.770 ; Rise       ; Clock           ;
+;  outputIR[4]   ; Clock      ; 3.847 ; 3.847 ; Rise       ; Clock           ;
+;  outputIR[5]   ; Clock      ; 3.984 ; 3.984 ; Rise       ; Clock           ;
+;  outputIR[6]   ; Clock      ; 3.777 ; 3.777 ; Rise       ; Clock           ;
+;  outputIR[7]   ; Clock      ; 3.804 ; 3.804 ; Rise       ; Clock           ;
+; outputMux2[*]  ; Clock      ; 3.998 ; 3.998 ; Rise       ; Clock           ;
+;  outputMux2[0] ; Clock      ; 3.998 ; 3.998 ; Rise       ; Clock           ;
+;  outputMux2[1] ; Clock      ; 4.192 ; 4.192 ; Rise       ; Clock           ;
+;  outputMux2[2] ; Clock      ; 4.099 ; 4.099 ; Rise       ; Clock           ;
+;  outputMux2[3] ; Clock      ; 4.100 ; 4.100 ; Rise       ; Clock           ;
+;  outputMux2[4] ; Clock      ; 4.072 ; 4.072 ; Rise       ; Clock           ;
 +----------------+------------+-------+-------+------------+-----------------+
 
 
@@ -744,11 +798,11 @@ No paths to report.
 +------------+---------------+--------+--------+--------+--------+
 ; Input Port ; Output Port   ; RR     ; RF     ; FR     ; FF     ;
 +------------+---------------+--------+--------+--------+--------+
-; Meminst    ; outputMux2[0] ; 10.497 ; 10.497 ; 10.497 ; 10.497 ;
-; Meminst    ; outputMux2[1] ; 10.518 ; 10.518 ; 10.518 ; 10.518 ;
-; Meminst    ; outputMux2[2] ; 10.225 ; 10.225 ; 10.225 ; 10.225 ;
-; Meminst    ; outputMux2[3] ; 10.267 ; 10.267 ; 10.267 ; 10.267 ;
-; Meminst    ; outputMux2[4] ; 10.234 ; 10.234 ; 10.234 ; 10.234 ;
+; Meminst    ; outputMux2[0] ; 10.228 ; 10.228 ; 10.228 ; 10.228 ;
+; Meminst    ; outputMux2[1] ; 10.503 ; 10.503 ; 10.503 ; 10.503 ;
+; Meminst    ; outputMux2[2] ; 10.505 ; 10.505 ; 10.505 ; 10.505 ;
+; Meminst    ; outputMux2[3] ; 10.510 ; 10.510 ; 10.510 ; 10.510 ;
+; Meminst    ; outputMux2[4] ; 10.469 ; 10.469 ; 10.469 ; 10.469 ;
 +------------+---------------+--------+--------+--------+--------+
 
 
@@ -757,11 +811,11 @@ No paths to report.
 +------------+---------------+-------+-------+-------+-------+
 ; Input Port ; Output Port   ; RR    ; RF    ; FR    ; FF    ;
 +------------+---------------+-------+-------+-------+-------+
-; Meminst    ; outputMux2[0] ; 5.329 ; 5.329 ; 5.329 ; 5.329 ;
-; Meminst    ; outputMux2[1] ; 5.346 ; 5.346 ; 5.346 ; 5.346 ;
-; Meminst    ; outputMux2[2] ; 5.223 ; 5.223 ; 5.223 ; 5.223 ;
-; Meminst    ; outputMux2[3] ; 5.266 ; 5.266 ; 5.266 ; 5.266 ;
-; Meminst    ; outputMux2[4] ; 5.236 ; 5.236 ; 5.236 ; 5.236 ;
+; Meminst    ; outputMux2[0] ; 5.232 ; 5.232 ; 5.232 ; 5.232 ;
+; Meminst    ; outputMux2[1] ; 5.335 ; 5.335 ; 5.335 ; 5.335 ;
+; Meminst    ; outputMux2[2] ; 5.333 ; 5.333 ; 5.333 ; 5.333 ;
+; Meminst    ; outputMux2[3] ; 5.343 ; 5.343 ; 5.343 ; 5.343 ;
+; Meminst    ; outputMux2[4] ; 5.306 ; 5.306 ; 5.306 ; 5.306 ;
 +------------+---------------+-------+-------+-------+-------+
 
 
@@ -806,8 +860,8 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 13    ; 13   ;
 ; Unconstrained Input Port Paths  ; 44    ; 44   ;
-; Unconstrained Output Ports      ; 8     ; 8    ;
-; Unconstrained Output Port Paths ; 18    ; 18   ;
+; Unconstrained Output Ports      ; 16    ; 16   ;
+; Unconstrained Output Port Paths ; 26    ; 26   ;
 +---------------------------------+-------+------+
 
 
@@ -817,7 +871,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Nov 23 17:46:24 2015
+    Info: Processing started: Mon Nov 23 21:22:09 2015
 Info: Command: quartus_sta InsCycOp -c InsCycOp
 Info: qsta_default_script.tcl version: #1
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
@@ -830,14 +884,14 @@ Info (332105): Deriving Clocks
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.905
+Info (332146): Worst-case setup slack is -0.896
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.905        -3.385 Clock 
-Info (332146): Worst-case hold slack is 0.940
+    Info (332119):    -0.896        -3.328 Clock 
+Info (332146): Worst-case hold slack is 0.620
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.940         0.000 Clock 
+    Info (332119):     0.620         0.000 Clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.631
@@ -846,14 +900,14 @@ Info (332146): Worst-case minimum pulse width slack is -1.631
     Info (332119):    -1.631       -17.517 Clock 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Info (332146): Worst-case setup slack is 0.271
+Info (332146): Worst-case setup slack is 0.277
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.271         0.000 Clock 
-Info (332146): Worst-case hold slack is 0.357
+    Info (332119):     0.277         0.000 Clock 
+Info (332146): Worst-case hold slack is 0.240
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.357         0.000 Clock 
+    Info (332119):     0.240         0.000 Clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
@@ -865,9 +919,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 454 megabytes
-    Info: Processing ended: Mon Nov 23 17:46:30 2015
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 443 megabytes
+    Info: Processing ended: Mon Nov 23 21:22:11 2015
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

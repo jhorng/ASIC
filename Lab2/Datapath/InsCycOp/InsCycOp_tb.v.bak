@@ -4,6 +4,7 @@ module InsCycOp_tb();
 	reg [7:0]inputIR;
 	
 	wire [7:5]IR;
+	wire [7:0]outputIR;
 	wire [4:0]outputMux2;
 	
 	integer i, j;
@@ -28,15 +29,17 @@ begin
 				Meminst=j;
 		end
 	end
-	$50 $finish;
+	#50 $finish;
 end
 
 always@(IR or outputMux2)
 begin
-	$display("IRload | JMPmux | PCload | Meminst");
-	$monitor(" %b\t %b\t %b\t %b", IRload, JMPmux, PCload, Meminst);
+	$display("IRload | JMPmux | PCload | Meminst | IR | outputMux2 | outputIR");
+	$monitor("    %b       %b       %b        %b       %b       %b", IRload, JMPmux, PCload, Meminst, IR, outputMux2, outputIR);
 end
 
 always #1 Clock=~Clock;
+
+InsCycOp Part1 (Clock, Reset, IRload, JMPmux, PCload, Meminst, inputIR, IR, outputIR, outputMux2);
 
 endmodule 
