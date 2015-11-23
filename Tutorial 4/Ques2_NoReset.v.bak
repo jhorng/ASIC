@@ -1,0 +1,11 @@
+module Ques2_Reset(
+	input iClk, iReset, iDat,
+	output reg [15:0]sr
+);
+
+	always@(posedge iClk)
+	begin
+		if(!iReset) sr<=0;
+		else sr <= {sr[14:0], iDat};
+	end
+endmodule

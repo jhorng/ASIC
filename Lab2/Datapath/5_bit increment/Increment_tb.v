@@ -1,0 +1,23 @@
+module Increment_tb();
+
+	reg [4:0]iDat;
+	wire [4:0]oDat;
+	
+	integer i;
+	
+	initial
+	begin
+	  for (i=0; i<10; i=i+1)
+	  begin
+	   #2 iDat={$random}%i;
+	  end
+	end
+	
+	always@(oDat)
+	begin
+	  $display("iDat = %b, oDat = %b", iDat, oDat);
+	end
+	
+Increment #(.width(5)) Incr (iDat, oDat);
+
+endmodule

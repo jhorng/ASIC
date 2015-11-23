@@ -1,0 +1,11 @@
+module Increment #(parameter size = 5)(
+	input [size-1:0]iDat;
+	output reg [size-1:0]oDat;
+);
+
+	always@(iDat)
+	begin
+		oDat=iDat+1;
+	end
+
+endmodule

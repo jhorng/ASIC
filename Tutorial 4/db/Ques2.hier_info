@@ -1,0 +1,8 @@
+|Ques4_NoReset
+iClk => oDat~reg0.CLK
+iDat1 => oDat.IN0
+iDat2 => oDat.IN1
+iDat3 => oDat~reg0.ACLR
+oDat <= oDat~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

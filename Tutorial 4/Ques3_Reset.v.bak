@@ -1,0 +1,15 @@
+module Ques3_NoReset(
+	input iReset, iClk,
+	input iDat1, iDat2,
+	output reg oDat
+);
+
+	always@(posedge iClk or negedge iReset)
+	begin
+		if (!iReset)
+			oDat<=0;
+		else
+			oDat<=iDat1 | iDat2;
+	end
+
+endmodule

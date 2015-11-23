@@ -1,0 +1,141 @@
+Quartus II
+Version 9.1 Build 222 10/21/2009 SJ Web Edition
+11
+980
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+ControlUnit_FPGA
+# storage
+db|ControlUnit.(0).cnf
+db|ControlUnit.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+controlunit_fpga.v
+704bb09d70d4cd5c4ba7cfbd1465ceb
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+start
+0000
+PARAMETER_UNSIGNED_BIN
+DEF
+fetch
+0001
+PARAMETER_UNSIGNED_BIN
+DEF
+decode
+0010
+PARAMETER_UNSIGNED_BIN
+DEF
+load
+1000
+PARAMETER_UNSIGNED_BIN
+DEF
+store
+1001
+PARAMETER_UNSIGNED_BIN
+DEF
+add
+1010
+PARAMETER_UNSIGNED_BIN
+DEF
+sub
+1011
+PARAMETER_UNSIGNED_BIN
+DEF
+Input
+1100
+PARAMETER_UNSIGNED_BIN
+DEF
+jz
+1101
+PARAMETER_UNSIGNED_BIN
+DEF
+jpos
+1110
+PARAMETER_UNSIGNED_BIN
+DEF
+halt
+1111
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+Part1
+# storage
+db|ControlUnit.(1).cnf
+db|ControlUnit.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+part1.v
+3ffb1ac53dbf4d3cb670412bfb79e90
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Part1:clk_div
+}
+# macro_sequence
+
+# end
+# complete
+
