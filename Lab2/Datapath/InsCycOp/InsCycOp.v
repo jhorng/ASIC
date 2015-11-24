@@ -2,12 +2,12 @@ module InsCycOp(
 	input Clock, Reset, IRload, JMPmux, PCload, Meminst,
 	input [7:0]inputIR,
 	output [7:5]IR,
-	//output [7:0]outputIR,
+	output [7:0]outputIR,
 	output [4:0]outputMux2
 );
 	
 	wire [4:0]IR4_0, outputPC, outputMux1, outputIncr;
-	wire [7:0]outputIR;
+	//wire [7:0]outputIR;
 	
 	assign IR4_0 = outputIR[4:0];
 	assign IR = outputIR[7:5];

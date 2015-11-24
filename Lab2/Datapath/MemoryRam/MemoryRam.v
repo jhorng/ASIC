@@ -13,7 +13,7 @@ module MemoryRam(
 		if (WE)
 			RAM[memAddr]<=iDat;
 		else
-			oDat=RAM[memAddr];
+			oDat<=RAM[memAddr];
 	end
 	
 	endmodule

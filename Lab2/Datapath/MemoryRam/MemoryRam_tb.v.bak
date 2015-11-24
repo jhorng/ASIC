@@ -16,9 +16,10 @@ module MemoryRam_tb();
 		for (i=0; i<5'b111; i=i+1)
 		begin
 	#4	 memAddr = memAddr + 5'b00001;
-      iDat = iDat + i;  		  
+      iDat = iDat + 1;  		  
 		end
 		WE=0;
+		memAddr=0;
 		for (i=0; i<5'b111; i=i+1)
 		begin
 	#4  memAddr = memAddr +5'b00001;
@@ -26,18 +27,11 @@ module MemoryRam_tb();
 		#50 $finish;
 	end
 	
-  always@(oDat)
-	begin
-	  $display("MemWr | Address | iDat | oDat");
-	  $monitor("    %b|    %b   |  %b  |  %b ", WE, memAddr, iDat, oDat);
-	  if(iDat == oDat)
-	    $display("Match");
-	  else
-	  begin
-	    $display("No Match!");
-	    $finish;
-	  end
-	end
+initial
+begin
+	$display("  MemWr | Address | iDat      | oDat    | Clock");
+	$monitor("    %b     %b     %b   %b      %d", WE, memAddr, iDat, oDat, Clock);
+end
 	
 always #1 Clock = ~Clock;
 	

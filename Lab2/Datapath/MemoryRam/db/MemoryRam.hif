@@ -1,7 +1,7 @@
-Version 8.1 Build 163 10/28/2008 SJ Web Edition
+Quartus II
+Version 9.1 Build 222 10/21/2009 SJ Web Edition
 11
-989
-OFF
+980
 OFF
 OFF
 OFF
@@ -15,8 +15,6 @@ Level2
 VRSM_ON
 VHSM_ON
 0
--- Start Partition --
--- End Partition --
 -- Start Library Paths --
 -- End Library Paths --
 -- Start VHDL Libraries --
@@ -32,8 +30,8 @@ ON
 }
 # case_sensitive
 # source_file
-MemoryRam.v
-94f0fb69c6ce5b14dea613e534d21d4
+memoryram.v
+28cdb4913dcdfc88bc3a3ca0836210e3
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -64,8 +62,8 @@ db|MemoryRam.(1).cnf
 db|MemoryRam.(1).cnf
 # case_insensitive
 # source_file
-c:|altera|81|quartus|libraries|megafunctions|altsyncram.tdf
-428afb9bbf965842aa82c9b05526af
+|altera|91|quartus|libraries|megafunctions|altsyncram.tdf
+11126d23236b22214ea7531dfb5e29be
 7
 # user_parameter {
 BYTE_SIZE_BLOCK
@@ -203,7 +201,7 @@ DEF
 RAM_BLOCK_TYPE
 AUTO
 PARAMETER_UNKNOWN
-USR
+DEF
 BYTE_SIZE
 8
 PARAMETER_UNKNOWN
@@ -265,7 +263,7 @@ Cyclone II
 PARAMETER_UNKNOWN
 USR
 CBXI_PARAMETER
-altsyncram_tif1
+altsyncram_ohd1
 PARAMETER_UNKNOWN
 USR
 }
@@ -361,38 +359,18 @@ address_a0
 -1
 3
 }
-# include_file {
-c:|altera|81|quartus|libraries|megafunctions|altdpram.inc
-99d442b5b66c88db4daf94d99c6e4e77
-c:|altera|81|quartus|libraries|megafunctions|altqpram.inc
-74e08939f96a7ea8e7a4d59a5b01fe7
-c:|altera|81|quartus|libraries|megafunctions|stratix_ram_block.inc
-2263a3bdfffeb150af977ee13902f70
-c:|altera|81|quartus|libraries|megafunctions|altrom.inc
-d4e3a69a331d3a99d3281790d99a1ebd
-c:|altera|81|quartus|libraries|megafunctions|lpm_mux.inc
-c22bfd353214c01495b560fc34e47d79
-c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
-ba79644cade9dcbd5df4af72a9b02986
-c:|altera|81|quartus|libraries|megafunctions|altram.inc
-e66a83eccf6717bed97c99d891ad085
-c:|altera|81|quartus|libraries|megafunctions|lpm_decode.inc
-bd0e2f5e01c1bd360461dceb53d48
-c:|altera|81|quartus|libraries|megafunctions|a_rdenreg.inc
-60d229340bc3c24acb0a137b4849830
-}
 # macro_sequence
 
 # end
 # entity
-altsyncram_tif1
+altsyncram_ohd1
 # storage
 db|MemoryRam.(2).cnf
 db|MemoryRam.(2).cnf
 # case_insensitive
 # source_file
-db|altsyncram_tif1.tdf
-9e1190dcb47cfefdd5a410b3e49c3e8c
+db|altsyncram_ohd1.tdf
+667b2441c2d2748bbfea413cb2852f8
 7
 # used_port {
 wren_a

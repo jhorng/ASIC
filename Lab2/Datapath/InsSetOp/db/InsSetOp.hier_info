@@ -2,8 +2,8 @@
 Clock => Clock.IN1
 Reset => Reset.IN1
 Aload => Aload.IN1
-sub => sub.IN1
-Asel[0] => Asel[0].IN1
+Sub => Sub.IN1
+Asel[0] => Asel[0].IN2
 Asel[1] => Asel[1].IN1
 Input[0] => Input[0].IN1
 Input[1] => Input[1].IN1
@@ -29,14 +29,15 @@ outputA[4] <= outputA[4].DB_MAX_OUTPUT_PORT_TYPE
 outputA[5] <= outputA[5].DB_MAX_OUTPUT_PORT_TYPE
 outputA[6] <= outputA[6].DB_MAX_OUTPUT_PORT_TYPE
 outputA[7] <= outputA[7].DB_MAX_OUTPUT_PORT_TYPE
-Aeq0[0] <= Aeq0.DB_MAX_OUTPUT_PORT_TYPE
-Aeq0[1] <= <VCC>
-Aeq0[2] <= <VCC>
-Aeq0[3] <= <VCC>
-Aeq0[4] <= <VCC>
-Aeq0[5] <= <VCC>
-Aeq0[6] <= <VCC>
-Aeq0[7] <= <VCC>
+outputAddSub[0] <= outputAddSub[0].DB_MAX_OUTPUT_PORT_TYPE
+outputAddSub[1] <= outputAddSub[1].DB_MAX_OUTPUT_PORT_TYPE
+outputAddSub[2] <= outputAddSub[2].DB_MAX_OUTPUT_PORT_TYPE
+outputAddSub[3] <= outputAddSub[3].DB_MAX_OUTPUT_PORT_TYPE
+outputAddSub[4] <= outputAddSub[4].DB_MAX_OUTPUT_PORT_TYPE
+outputAddSub[5] <= outputAddSub[5].DB_MAX_OUTPUT_PORT_TYPE
+outputAddSub[6] <= outputAddSub[6].DB_MAX_OUTPUT_PORT_TYPE
+outputAddSub[7] <= outputAddSub[7].DB_MAX_OUTPUT_PORT_TYPE
+Aeq0 <= Aeq0.DB_MAX_OUTPUT_PORT_TYPE
 Apos <= outputA[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -76,6 +77,41 @@ oDat[7] <= oDat.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |InsSetOp|Multiplexer:mux3_1
+iDat1[0] => oDat.DATAB
+iDat1[1] => oDat.DATAB
+iDat1[2] => oDat.DATAB
+iDat1[3] => oDat.DATAB
+iDat1[4] => oDat.DATAB
+iDat1[5] => oDat.DATAB
+iDat1[6] => oDat.DATAB
+iDat1[7] => oDat.DATAB
+iDat0[0] => oDat.DATAA
+iDat0[1] => oDat.DATAA
+iDat0[2] => oDat.DATAA
+iDat0[3] => oDat.DATAA
+iDat0[4] => oDat.DATAA
+iDat0[5] => oDat.DATAA
+iDat0[6] => oDat.DATAA
+iDat0[7] => oDat.DATAA
+load[0] => oDat.OUTPUTSELECT
+load[0] => oDat.OUTPUTSELECT
+load[0] => oDat.OUTPUTSELECT
+load[0] => oDat.OUTPUTSELECT
+load[0] => oDat.OUTPUTSELECT
+load[0] => oDat.OUTPUTSELECT
+load[0] => oDat.OUTPUTSELECT
+load[0] => oDat.OUTPUTSELECT
+oDat[0] <= oDat.DB_MAX_OUTPUT_PORT_TYPE
+oDat[1] <= oDat.DB_MAX_OUTPUT_PORT_TYPE
+oDat[2] <= oDat.DB_MAX_OUTPUT_PORT_TYPE
+oDat[3] <= oDat.DB_MAX_OUTPUT_PORT_TYPE
+oDat[4] <= oDat.DB_MAX_OUTPUT_PORT_TYPE
+oDat[5] <= oDat.DB_MAX_OUTPUT_PORT_TYPE
+oDat[6] <= oDat.DB_MAX_OUTPUT_PORT_TYPE
+oDat[7] <= oDat.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|InsSetOp|Multiplexer:mux3
 iDat1[0] => oDat.DATAB
 iDat1[1] => oDat.DATAB
 iDat1[2] => oDat.DATAB
@@ -154,14 +190,14 @@ Output[7] <= Output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |InsSetOp|AddSub:AS
-sub => oDat.OUTPUTSELECT
-sub => oDat.OUTPUTSELECT
-sub => oDat.OUTPUTSELECT
-sub => oDat.OUTPUTSELECT
-sub => oDat.OUTPUTSELECT
-sub => oDat.OUTPUTSELECT
-sub => oDat.OUTPUTSELECT
-sub => oDat.OUTPUTSELECT
+Sub => oDat.OUTPUTSELECT
+Sub => oDat.OUTPUTSELECT
+Sub => oDat.OUTPUTSELECT
+Sub => oDat.OUTPUTSELECT
+Sub => oDat.OUTPUTSELECT
+Sub => oDat.OUTPUTSELECT
+Sub => oDat.OUTPUTSELECT
+Sub => oDat.OUTPUTSELECT
 iDat1[0] => Add0.IN16
 iDat1[0] => Add1.IN8
 iDat1[1] => Add0.IN15

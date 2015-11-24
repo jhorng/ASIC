@@ -32,10 +32,10 @@ begin
 	#50 $finish;
 end
 
-always@(IR or outputMux2)
+initial
 begin
-	$display("IRload | JMPmux | PCload | Meminst | IR | outputMux2 | outputIR");
-	$monitor("    %b       %b       %b        %b       %b       %b", IRload, JMPmux, PCload, Meminst, IR, outputMux2, outputIR);
+	$display("inputIR | IRload | JMPmux | PCload | Meminst | IR | outputMux2 | outputIR");
+	$monitor("   %b    %b       %b       %b        %b       %b    %b      %b", inputIR, IRload, JMPmux, PCload, Meminst, IR, outputMux2, outputIR);
 end
 
 always #1 Clock=~Clock;

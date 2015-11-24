@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 4.283 ns
-From           : inputIR[4]
-To             : Register:IR_reg|Output[4]
+Actual Time    : 4.764 ns
+From           : JMPmux
+To             : Register:PC_reg|Output[4]
 From Clock     : --
 To Clock       : Clock
 Failed Paths   : 0
@@ -15,20 +15,40 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.008 ns
-From           : Register:IR_reg|Output[2]
-To             : outputIR[2]
+Actual Time    : 8.483 ns
+From           : Register:PC_reg|Output[1]
+To             : outputMux2[1]
 From Clock     : Clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.296 ns
+From           : Meminst
+To             : outputMux2[4]
+From Clock     : --
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -3.099 ns
-From           : inputIR[7]
-To             : Register:IR_reg|Output[7]
+Actual Time    : -0.219 ns
+From           : PCload
+To             : Register:PC_reg|Output[4]
 From Clock     : --
+To Clock       : Clock
+Failed Paths   : 0
+
+Type           : Clock Setup: 'Clock'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 380.08 MHz ( period = 2.631 ns )
+From           : Register:PC_reg|Output[0]
+To             : Register:PC_reg|Output[4]
+From Clock     : Clock
 To Clock       : Clock
 Failed Paths   : 0
 
