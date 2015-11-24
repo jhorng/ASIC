@@ -2,11 +2,11 @@ module InsSetOp(
 	input Clock, Reset, Aload, sub,
 	input [1:0]Asel,
 	input [7:0]Input, outputRam,
-	output [7:0]outputA, Aeq0,
+	output [7:0]outputA, Aeq0, outputAddSub,
 	output Apos	
 );
 
-	wire [7:0]outputMux3_1, outputMux3_2, outputMux3, inputA, outputAddSub;
+	wire [7:0]outputMux3_1, outputMux3_2, outputMux3, inputA;
 	
 	assign outputMux3 = outputMux3_1 | outputMux3_2;
 	assign Aeq0=~(outputA[0] | outputA[1] | outputA[2] | outputA[3] | outputA[4] | outputA[5] | outputA[6] | outputA[7]);
