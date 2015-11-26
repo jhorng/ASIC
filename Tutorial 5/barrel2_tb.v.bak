@@ -29,6 +29,8 @@ module barrel2_tb();
 	
 	initial //main loop
 	begin
+	  clk=0;
+	  reset=0;
 	  errors=0;
 	  Load=1;
 	  $display("Load = %h", Load);
@@ -40,10 +42,10 @@ module barrel2_tb();
 	  #20 $finish;
 	end
 	
-	always@(nReg, data_in, Load)
+	always@(nReg)
 	begin
-		$display ("Expected value | Data_out");
-		$monitor(" %b\t %b", nReg, data_out);
+		$display ("Expected value | Data_out | Clock | Time");
+		$display("  %b\t  %b     %b   %t", nReg, data_out, clk, $time);
 	end
 	
 	task verify_output;
