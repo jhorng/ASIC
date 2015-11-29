@@ -1,75 +1,72 @@
 `timescale 1ns/1ns
 module barrel2_tb();
 	
-	reg clk, reset, Load, errors;
+	reg clk, reset, Load;
 	reg [2:0]sel;
 	reg [7:0]data_in;
 	reg [7:0]shifter, nReg;
 	
 	wire [7:0]data_out;
-	wire [7:0]brl_in, brl_out;
 	
-	integer i,j;
+	integer errors, i, j;
 	
-	barrel #(.data_size(8)) brl1 (.clk(clk), .reset(reset), .Load(Load), .sel(sel), .data_in(data_in), .data_out(data_out));
-	//barrel_wrong #(.data_size(8)) brl2 (clk, reset, Load, sel, data_in, data_out);
+	// barrel #(.data_size(8)) brl1 (.clk(clk), .reset(reset), .Load(Load), .sel(sel), .data_in(data_in), .data_out(data_out));
+	barrel_wrong #(.data_size(8)) brl2 (.clk(clk), .reset(reset), .Load(Load), .sel(sel), .data_in(data_in), .data_out(data_out));
 	
 	initial
 	begin
 		clk<=0;
-		forever #5 clk = ~clk;
+		forever #1 clk = ~clk;
 	end
 	
 	initial
 	begin
-		reset<=0;
-		@(posedge clk);
-		@(negedge clk) reset=1;
+		reset<=1;
+		@(posedge clk)
+		@(negedge clk) reset=0;
 	end
 	
 	initial //main loop
 	begin
 	  clk=0;
-	  reset=0;
+	  reset=1;
 	  errors=0;
+	  #2 reset=0;
 	  Load=1;
 	  $display("Load = %h", Load);
 	  #2 BARREL();
-	  Load =0;
-	  $display("Load = %h", Load);
-	  #2 BARREL();
+	  $display("Data_out = %b, nReg = %b\n", data_out, nReg);
+	  // Load=0;
+    // $display("Load = %h", Load);
+	  // #2 BARREL();
+	  // $display("Data_out = %b, nReg = %b\n", data_out, nReg);
 	  SUMMARY();
 	  #20 $finish;
-	end
-	
-	always@(nReg)
-	begin
-		$display ("Expected value | Data_out | Clock | Time");
-		$display("  %b\t  %b     %b%t", nReg, data_out, clk, $time);
 	end
 	
 	task verify_output;
 		input [7:0]expected_value;
 		begin
-			if(data_out[7:0] != expected_value[7:0])
+			if(expected_value[7:0] != data_out[7:0])
 			begin
 				errors = errors + 1;
-				$display("Simualted Value = %b, Expected Value = %b, errors = %d, at time = %d\n", data_out, expected_value, errors, $time);
+				$display("Simualted Value = %b, Expected Value = %b, sel = %d, at time = %dns\n", data_out, expected_value, sel, $time);
 			end
 		end
 	endtask
 	
 	task BARREL;
+  // reg [7:0]shifter, nReg;
 	begin
 		assign shifter = Load? data_in : nReg;
-		for (i=0; i<3; i=i+1)
+		for (i=0; i<4; i=i+1)
 		begin
-			data_in={$random}%3;
+			data_in={$random}%256;
 			for(j=0; j<8; j=j+1)
 			begin
 				sel=j;
 				SHIFTER(shifter, nReg);
-				verify_output(nReg);
+				#2 verify_output(nReg);
 			end
 		end
 	end
@@ -98,10 +95,10 @@ module barrel2_tb();
 		if (errors!=0)
 		begin
 			$display("Fail!");
-			$display("Errors = %d", errors);
+			$display("Errors = %d\n", errors);
 		end
 		else
-			$display("Successful!");
+			$display("Successful!\n");
 	endtask
 	
 endmodule
