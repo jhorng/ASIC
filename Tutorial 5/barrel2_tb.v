@@ -31,15 +31,17 @@ module barrel2_tb();
 	  clk=0;
 	  reset=1;
 	  errors=0;
+    sel=0;
 	  #2 reset=0;
 	  Load=1;
 	  $display("Load = %h", Load);
 	  #2 BARREL();
 	  $display("Data_out = %b, nReg = %b\n", data_out, nReg);
-	  // Load=0;
-    // $display("Load = %h", Load);
-	  // #2 BARREL();
-	  // $display("Data_out = %b, nReg = %b\n", data_out, nReg);
+	  Load=0;
+    sel=0;
+    $display("Load = %h", Load);
+	  #2 BARREL();
+	  $display("Data_out = %b, nReg = %b\n", data_out, nReg);
 	  SUMMARY();
 	  #20 $finish;
 	end
@@ -54,9 +56,8 @@ module barrel2_tb();
 			end
 		end
 	endtask
-	
+  
 	task BARREL;
-  // reg [7:0]shifter, nReg;
 	begin
 		assign shifter = Load? data_in : nReg;
 		for (i=0; i<4; i=i+1)
