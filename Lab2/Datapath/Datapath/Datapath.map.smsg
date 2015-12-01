@@ -1,1 +1,2 @@
 Warning (10268): Verilog HDL information at MemoryRam.v(11): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at Datapath_tb.v(3): object "Sub" differs only in case from object "sub" in the same scope

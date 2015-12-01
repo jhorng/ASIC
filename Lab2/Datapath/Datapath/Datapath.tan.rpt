@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for Datapath
-Tue Nov 24 17:53:27 2015
+Tue Dec 01 18:03:39 2015
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -509,7 +509,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Tue Nov 24 17:53:27 2015
+    Info: Processing started: Tue Dec 01 18:03:39 2015
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Datapath -c Datapath --timing_analysis_only
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "Clock" is an undefined clock
@@ -591,7 +591,7 @@ Info: th for register "InsSetOp:ISO|Register:A_reg|Output[3]" (data pin = "Asel[
         Info: Total interconnect delay = 5.626 ns ( 81.44 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 161 megabytes
-    Info: Processing ended: Tue Nov 24 17:53:27 2015
+    Info: Processing ended: Tue Dec 01 18:03:39 2015
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

@@ -1,3 +1,10 @@
+/*
+	Name 	: Chu Jaan Horng
+	Title 	: Barrel testbench
+	ID		: 15WAR09633
+	Date	: 1-12-2015
+*/
+
 `timescale 1ns/1ns
 module barrel2_tb();
 	
@@ -10,8 +17,8 @@ module barrel2_tb();
 	
 	integer errors, i, j;
 	
-	// barrel #(.data_size(8)) brl1 (.clk(clk), .reset(reset), .Load(Load), .sel(sel), .data_in(data_in), .data_out(data_out));
-	barrel_wrong #(.data_size(8)) brl2 (.clk(clk), .reset(reset), .Load(Load), .sel(sel), .data_in(data_in), .data_out(data_out));
+	barrel #(.data_size(8)) brl1 (.clk(clk), .reset(reset), .Load(Load), .sel(sel), .data_in(data_in), .data_out(data_out));
+	// barrel_wrong #(.data_size(8)) brl2 (.clk(clk), .reset(reset), .Load(Load), .sel(sel), .data_in(data_in), .data_out(data_out));
 	
 	initial
 	begin

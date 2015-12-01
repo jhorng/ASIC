@@ -7,13 +7,13 @@ module Datapath(
 	output [7:0]Output
 );
 	
-	wire [4:0]outputMux2;
+	// wire [4:0]outputMux2;
 	wire [7:0]outputRam, outputAddSub;
 	
 	InsCycOp  ICO (.Clock(Clock), .Reset(Reset), .IRload(IRload), .JMPmux(JMPmux), .PCload(PCload), .Meminst(Meminst),
 				   .inputIR(outputRam), .IR(IR), .outputMux2(outputMux2));
 	MemoryRam RAM (.Clock(Clock), .WE(MemWr), .memAddr(outputMux2), .iDat(Output), .oDat(outputRam));
 	InsSetOp  ISO (.Clock(Clock), .Reset(Reset), .Aload(Aload), .Sub(Sub), .Asel(Asel), .Input(Input), 
-				   .outputRam(outputRam), .outputA(Output), .outputAddSub(outputAddSub), .Aeq0(Aeq0), .Apos(Apos));
+				   .outputRam(outputRam), .outputA(Output), .Aeq0(Aeq0), .Apos(Apos));
 	
 endmodule 
