@@ -4,11 +4,12 @@ module Datapath(
 	input [7:0]Input,
 	output Aeq0, Apos,
 	output [7:5]IR,
-	output [7:0]Output
+	output [7:0]Output, outputRam
 );
 	
 	wire [4:0]outputMux2;
-	wire [7:0]outputRam, outputAddSub;
+	//wire [7:0]outputRam, outputAddSub;
+	wire [7:0]outputAddSub;
 	
 	InsCycOp  ICO (.Clock(Clock), .Reset(Reset), .IRload(IRload), .JMPmux(JMPmux), .PCload(PCload), .Meminst(Meminst),
 				   .inputIR(outputRam), .IR(IR), .outputMux2(outputMux2));

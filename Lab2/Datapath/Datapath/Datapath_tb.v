@@ -6,7 +6,7 @@ module Datapath_tb();
     
     wire Aeq0, Apos;
     wire [7:5]IR;
-    wire [7:0]Output;
+    wire [7:0]Output, outputRam;
     
     integer i;
 
@@ -19,6 +19,7 @@ Reset=1;
 #2 start();
 #2 fetch();
 #2 decode();
+#2 oneTimeReset();
 #2 load();
 // #2 add();
 // #2 sub();
@@ -30,8 +31,8 @@ end
 
 initial
 begin
-$display("IRload | JMPmux | PCload | Meminst | MemWr | Aload | Sub |   Asel   |   Input  |  Output  | time");
-$monitor("	%b	%b	%b	%b	%b	%b	%b	%b	%b   %b %t", IRload, JMPmux, PCload, Meminst, MemWr, Aload, Sub, Asel, Input, Output, $time);
+$display("IRload | JMPmux | PCload | Meminst | MemWr | Aload | Sub |   Asel   |   Input  |  Output  |  outRam  | time");
+$monitor("	%b	%b	%b	%b	%b	%b	%b	%b	%b   %b  %b %t", IRload, JMPmux, PCload, Meminst, MemWr, Aload, Sub, Asel, Input, Output, outputRam, $time);
 end
 
 
@@ -39,9 +40,18 @@ task writeMemory;
 begin
 	for(i=0; i<10; i=i+1)
 	begin
-		#2 inputState();
+		#2 Asel = 2'b01;
+       Aload = 1;
+       Input={$random}%256;
 		#2 store();
 	end
+end
+endtask
+
+task oneTimeReset();
+begin
+  #2 Reset=1;
+  #4 Reset=0;
 end
 endtask
 
@@ -178,6 +188,6 @@ endtask
 
 always #1 Clock=~Clock;
 
-Datapath DP (Clock, Reset, IRload, JMPmux, PCload, Meminst, MemWr, Aload, Sub, Asel, Input, Aeq0, Apos, IR, Output);
+Datapath DP (Clock, Reset, IRload, JMPmux, PCload, Meminst, MemWr, Aload, Sub, Asel, Input, Aeq0, Apos, IR, Output, outputRam);
 
 endmodule 
