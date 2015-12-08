@@ -24,9 +24,15 @@ $display("value iDat!");
 #2 load();
 #2 inputState();
 #2 writeMemory();
-#2 add();
-#10 sub();
-#2 jz();
+#2 {IRload, JMPmux, PCload, Meminst, MemWr, Aload, Sub} = 7'b0111010;
+$display("Reset address!");
+#2 {IRload, JMPmux, PCload, Meminst, MemWr, Aload, Sub} = 7'b1010010;
+$display("Retrieve value from RAM!");
+#4 add();
+//#10 sub();
+//#10 IRload=1; PCload=1;
+//$display("IRload=1 and PCload=1");
+//#2 jz();
 //#2 fetch();
 //#2 decode();
 #10 $finish;
@@ -34,8 +40,8 @@ end
 
 initial
 begin
-$display("IRload | JMPmux | PCload | Meminst | MemWr | Aload | Sub |   Asel   |   Input  |  Output  |  outRam  |   IR   |  IR4_0  |  outputPC | time");
-$monitor("	%b	%b	%b	%b	%b	%b	%b	%b	%b   %b   %b 	   %b 	   %b      %b %t", IRload, JMPmux, PCload, Meminst, MemWr, Aload, Sub, Asel, Input, Output, outputRam, IR, IR4_0, outputPC, $time);
+$display("IRload | JMPmux | PCload | Meminst | MemWr | Aload | Sub |   Asel   |   Input  |  Output  |  outRam  |   IR   |  IR4_0  |  outputPC | Aeq0 | Apos | time");
+$monitor("	%b	%b	%b	%b	%b	%b	%b	%b	%b   %b   %b 	   %b 	   %b      %b      %b       %b %t", IRload, JMPmux, PCload, Meminst, MemWr, Aload, Sub, Asel, Input, Output, outputRam, IR, IR4_0, outputPC, Aeq0, Apos, $time);
 end
 
 
@@ -44,9 +50,9 @@ begin
 $display("Write data into memory!");
 	for(i=0; i<3; i=i+1)
 	begin
-		#2 PCload=0;
+		#2 PCload=1;
 		IRload=1;
-		JMPmux=1;
+		JMPmux=0;
 		Meminst=0;
 		MemWr=1;
 		#2 Asel = 2'b01;
