@@ -3,10 +3,11 @@ module InsCycOp(
 	input [7:0]inputIR,
 	output [7:5]IR,
 	//output [7:0]outputIR,
-	output [4:0]outputMux2
+	output [4:0]outputMux2, IR4_0, outputPC
 );
 	
-	wire [4:0]IR4_0, outputPC, outputMux1, outputIncr;
+	// wire [4:0]IR4_0, outputPC, outputMux1, outputIncr;
+	wire [4:0]outputMux1, outputIncr;
 	wire [7:0]outputIR;
 	
 	assign IR4_0 = outputIR[4:0];
