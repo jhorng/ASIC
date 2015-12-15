@@ -1,6 +1,6 @@
 Flow report for Processor
-Sun Dec 13 11:48:36 2015
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue Dec 15 16:40:48 2015
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
 ---------------------
@@ -13,15 +13,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Flow Elapsed Time
   6. Flow OS Summary
   7. Flow Log
-  8. Flow Messages
-  9. Flow Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
+Copyright (C) 1991-2009 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,26 +35,27 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Flow Summary                                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sun Dec 13 11:48:34 2015           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; Processor                                       ;
-; Top-level Entity Name              ; Processor                                       ;
-; Family                             ; Cyclone II                                      ;
-; Device                             ; EP2C20F484C7                                    ;
-; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 0 / 18,752 ( 0 % )                              ;
-;     Total combinational functions  ; 0 / 18,752 ( 0 % )                              ;
-;     Dedicated logic registers      ; 0 / 18,752 ( 0 % )                              ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 20 / 315 ( 6 % )                                ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
-+------------------------------------+-------------------------------------------------+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++------------------------------------+-----------------------------------------+
+; Flow Status                        ; Successful - Tue Dec 15 16:40:48 2015   ;
+; Quartus II Version                 ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
+; Revision Name                      ; Processor                               ;
+; Top-level Entity Name              ; MemoryRam                               ;
+; Family                             ; Cyclone II                              ;
+; Device                             ; EP2C20F484C7                            ;
+; Timing Models                      ; Final                                   ;
+; Met timing requirements            ; Yes                                     ;
+; Total logic elements               ; 0 / 18,752 ( 0 % )                      ;
+;     Total combinational functions  ; 0 / 18,752 ( 0 % )                      ;
+;     Dedicated logic registers      ; 0 / 18,752 ( 0 % )                      ;
+; Total registers                    ; 0                                       ;
+; Total pins                         ; 23 / 315 ( 7 % )                        ;
+; Total virtual pins                 ; 0                                       ;
+; Total memory bits                  ; 256 / 239,616 ( < 1 % )                 ;
+; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                          ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                           ;
++------------------------------------+-----------------------------------------+
 
 
 +-----------------------------------------+
@@ -64,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/13/2015 11:48:25 ;
+; Start date & time ; 12/15/2015 16:40:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Processor           ;
 +-------------------+---------------------+
@@ -75,41 +74,42 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 256040835392424.144997850510964       ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 180419519926403.145016881103540       ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top        ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; MemoryRam   ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; MemoryRam   ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; MemoryRam   ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; MemoryRam                             ; Processor     ; --          ; --         ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 480 MB              ; 00:00:01                           ;
-; Fitter                    ; 00:00:04     ; 1.7                     ; 882 MB              ; 00:00:05                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 453 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 451 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:08     ; --                      ; --                  ; 00:00:09                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis    ; 00:00:10     ; 1.0                     ; 201 MB              ; 00:00:01                           ;
+; Fitter                  ; 00:00:13     ; 1.0                     ; 235 MB              ; 00:00:02                           ;
+; Assembler               ; 00:00:11     ; 1.0                     ; 212 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:11     ; 1.0                     ; 146 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:45     ; --                      ; --                  ; 00:00:04                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; Diablos          ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; Diablos          ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; Diablos          ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; Diablos          ; Windows 7 ; 6.2        ; x86_64         ;
-+---------------------------+------------------+-----------+------------+----------------+
++------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                          ;
++-------------------------+------------------+---------------+------------+----------------+
+; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++-------------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis    ; user20-PC        ; Windows Vista ; 6.1        ; i686           ;
+; Fitter                  ; user20-PC        ; Windows Vista ; 6.1        ; i686           ;
+; Assembler               ; user20-PC        ; Windows Vista ; 6.1        ; i686           ;
+; Classic Timing Analyzer ; user20-PC        ; Windows Vista ; 6.1        ; i686           ;
++-------------------------+------------------+---------------+------------+----------------+
 
 
 ------------
@@ -118,7 +118,7 @@ applicable agreement for further details.
 quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor
 quartus_fit --read_settings_files=off --write_settings_files=off Processor -c Processor
 quartus_asm --read_settings_files=off --write_settings_files=off Processor -c Processor
-quartus_sta Processor -c Processor
+quartus_tan --read_settings_files=off --write_settings_files=off Processor -c Processor --timing_analysis_only
 
 
 
