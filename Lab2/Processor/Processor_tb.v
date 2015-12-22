@@ -118,7 +118,7 @@ module Processor_tb();
 				Y = Y - X;
 		end
 		VERIFY_OUTPUT(X);
-    $display("Info: Computed result (%d) at time %t", X, $time);
+    $display("Info: Computed result (%d) at time %tns", X, $time);
 	end 
 	endtask
 	
@@ -137,6 +137,7 @@ module Processor_tb();
 	
 	task SUMMARY;
 	begin
+	  $display("\nInfo: End of calculation. Halt (%d) at %tns", Halt, $time);
 		if(errors > 0)
 			$display("\nInfo: Fail --> Total errors (%d)\n", errors);
 		else

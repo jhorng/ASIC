@@ -9,15 +9,17 @@
 `timescale 1ns/1ns
 module Processor_tb();
 	
-	reg Clock, Reset, Enter;
+	reg Clock, Reset, Enter, Enable;
 	reg [7:0]Input;
+  reg [7:0]tempX, tempY;
 	
 	wire Halt;
 	wire [7:0]Output;
 	
-	integer errors, i, j;
+	integer errors, i;
 	
-	Processor up (.Clock(Clock), .Reset(Reset), .Enter(Enter), .Input(Input), .Halt(Halt), .Output(Output));
+	Processor up (.Clock(Clock), .Reset(Reset), .Enter(Enter), .Enable(Enable), .Input(Input), .Halt(Halt), .Output(Output));
+	Processor up (.Clock(Clock), .Reset(Reset), .Enter(Enter), .Enable(Enable), .Input(Input), .Halt(Halt), .Output(Output));
 	
 	// -----------------Global Reset and Clock-----------------
 	initial
@@ -29,26 +31,44 @@ module Processor_tb();
 	initial
 	begin
 		Reset<=1;
-		@(posedge Clock)
-		@(negedge Clock) Reset=0;
+		@(posedge Clock);
+		@(negedge Clock) Reset=0; 
 	end
 	
 	// -----------------Main Block of the Testbench-----------------
 	initial
 	begin
 		INIT_VARS();
-		RESET();
-		j = {$random}%128;
-		for (i=0; i<100; i=i+1)
+    INIT_RAM();
+    // tempX = {$random}%128;
+    // tempY = {$random}%128;
+		for (i=1; i<100; i=i+1)
 		begin
-			j = {$random}%128;
+    RESET();
+    tempX = {$random}%128;
+      while(tempX == 0)
+      begin
+        tempX = {$random}%128;
+      end
+			#30 INPUT_VALUE(tempX);
+    tempY = {$random}%128;
+      while(tempY == 0)
+      begin
+        tempY = {$random}%128;
+      end
+      #30 INPUT_VALUE(tempY);
+      #2 COMPUTATION(tempX, tempY);
 		end
-		INPUT_VALUE(i);
-		INPUT_VALUE(j);
-		COMPUTATION(j, i);
 		SUMMARY();
+    #2 $finish;
 	end
-	
+	// -------------------------------------------------------------
+  // initial
+  // begin
+    // $display("Enter |  Input  |   Output  | Halt | Time");
+    // $monitor("  %d       %d       %d       %b %tns\n", Enter, Input, Output, Halt, $time);
+  // end
+  
 	// ---------------------------Test sets-------------------------
 	task RESET; 
 	begin
@@ -64,24 +84,33 @@ module Processor_tb();
 		Clock=0;
 		Enter=0;
 		Input=0;
+    Enable=0;
+    errors=0;
 	end
 	endtask
 	
+  task INIT_RAM;
+  begin
+    $display("Info: Initializing Memory");
+    Enable=1;
+    #2 Enable=0;
+  end
+  endtask
+  
 	task INPUT_VALUE;
 	input [7:0]iDat;
 	begin
-	$display("Info: Data (%b) inputs into Datapath", iDat);
+	$display("Info: Data (%d) inputs into Datapath", iDat);
 		Input = iDat;
-		#10 Enter=1;
-		#10 Enter=0;
-		$display("Info: Input enterred when Enter (%h) at %t", iDat, Enter, $time);
+    Enter=1;
+		#2 Enter=0;
 	end
 	endtask
 	
 	task COMPUTATION;
 	input [7:0]X, Y;
 	begin
-	$display("Info: Compute (%b) and (%b)", X, Y);
+	$display("Info: Compute X (%d) and Y (%d)", X, Y);
 		while(X != Y)
 		begin
 			if(X > Y)
@@ -90,27 +119,30 @@ module Processor_tb();
 				Y = Y - X;
 		end
 		VERIFY_OUTPUT(X);
+    $display("Info: Computed result (%d) at time %tns", X, $time);
 	end 
 	endtask
 	
 	task VERIFY_OUTPUT;
 	input [7:0]expected_value;
 	begin
-	$display("Info: Verifying output");
-		if(Output[7:0] != expected_value[7:0])
+	$display("Info: Verifying output X");
+    while(!Halt) #1;
+		if(expected_value != Output)
 		begin
 			errors = errors + 1;
-			$display("Expected the answer to be %b but it was %b at time = %tns\n", expected_value, Output, $time);
+			$display("Expected answer to be %d but it was %d at time = %tns\n", expected_value, Output, $time);
 		end
 	end
 	endtask
 	
 	task SUMMARY;
 	begin
+	  $display("\nInfo: End of calculation. Halt (%d) at %tns", Halt, $time);
 		if(errors > 0)
-			$display("Info: Fail --> Total errors (%d)", errors);
+			$display("\nInfo: Fail --> Total errors (%d)\n", errors);
 		else
-			$display("Info: Success");
+			$display("\nInfo: Success\n");
 	end
 	endtask
 endmodule 

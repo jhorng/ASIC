@@ -1,0 +1,866 @@
+Classic Timing Analyzer report for Processor
+Tue Dec 22 16:49:10 2015
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'Clock'
+  7. tsu
+  8. tco
+  9. tpd
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                 ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------------------+---------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                               ; To                                                ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------------------+---------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 4.197 ns                         ; KEY[1]                                             ; Datapath:DP|InitRam:modifiedRam|RAM[13][0]        ; --         ; Clock    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 13.169 ns                        ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[4]  ; LEDG[4]                                           ; Clock      ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 8.897 ns                         ; KEY[2]                                             ; LEDR[8]                                           ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 4.053 ns                         ; SW[2]                                              ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[2] ; --         ; Clock    ; 0            ;
+; Clock Setup: 'Clock'         ; N/A   ; None          ; 141.56 MHz ( period = 7.064 ns ) ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|Q[3]              ; Clock      ; Clock    ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                                    ;                                                   ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------------------+---------------------------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C20F484C7       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'Clock'                                                                                                                                                                                                                                                                                               ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------------------------+---------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                               ; To                                                ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------------------------+---------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 141.56 MHz ( period = 7.064 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|Q[3]              ; Clock      ; Clock    ; None                        ; None                      ; 6.824 ns                ;
+; N/A                                     ; 143.04 MHz ( period = 6.991 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|Q[1]              ; Clock      ; Clock    ; None                        ; None                      ; 6.743 ns                ;
+; N/A                                     ; 143.58 MHz ( period = 6.965 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|Q[6]              ; Clock      ; Clock    ; None                        ; None                      ; 6.731 ns                ;
+; N/A                                     ; 144.82 MHz ( period = 6.905 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|Q[3]              ; Clock      ; Clock    ; None                        ; None                      ; 6.665 ns                ;
+; N/A                                     ; 146.37 MHz ( period = 6.832 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|Q[1]              ; Clock      ; Clock    ; None                        ; None                      ; 6.584 ns                ;
+; N/A                                     ; 146.46 MHz ( period = 6.828 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[4] ; Datapath:DP|InitRam:modifiedRam|Q[6]              ; Clock      ; Clock    ; None                        ; None                      ; 6.594 ns                ;
+; N/A                                     ; 146.61 MHz ( period = 6.821 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|Q[4]              ; Clock      ; Clock    ; None                        ; None                      ; 6.581 ns                ;
+; N/A                                     ; 146.93 MHz ( period = 6.806 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|Q[6]              ; Clock      ; Clock    ; None                        ; None                      ; 6.572 ns                ;
+; N/A                                     ; 147.12 MHz ( period = 6.797 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[4] ; Datapath:DP|InitRam:modifiedRam|Q[6]              ; Clock      ; Clock    ; None                        ; None                      ; 6.563 ns                ;
+; N/A                                     ; 147.58 MHz ( period = 6.776 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|Q[6]              ; Clock      ; Clock    ; None                        ; None                      ; 6.542 ns                ;
+; N/A                                     ; 147.73 MHz ( period = 6.769 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|Q[2]              ; Clock      ; Clock    ; None                        ; None                      ; 6.529 ns                ;
+; N/A                                     ; 147.91 MHz ( period = 6.761 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|Q[3]              ; Clock      ; Clock    ; None                        ; None                      ; 6.521 ns                ;
+; N/A                                     ; 148.15 MHz ( period = 6.750 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|Q[1]              ; Clock      ; Clock    ; None                        ; None                      ; 6.502 ns                ;
+; N/A                                     ; 148.79 MHz ( period = 6.721 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|Q[2]              ; Clock      ; Clock    ; None                        ; None                      ; 6.481 ns                ;
+; N/A                                     ; 149.75 MHz ( period = 6.678 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|Q[1]              ; Clock      ; Clock    ; None                        ; None                      ; 6.430 ns                ;
+; N/A                                     ; 149.79 MHz ( period = 6.676 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|Q[5]              ; Clock      ; Clock    ; None                        ; None                      ; 6.430 ns                ;
+; N/A                                     ; 150.11 MHz ( period = 6.662 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|Q[4]              ; Clock      ; Clock    ; None                        ; None                      ; 6.422 ns                ;
+; N/A                                     ; 150.13 MHz ( period = 6.661 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|Q[3]              ; Clock      ; Clock    ; None                        ; None                      ; 6.421 ns                ;
+; N/A                                     ; 151.03 MHz ( period = 6.621 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[1] ; Datapath:DP|InitRam:modifiedRam|Q[3]              ; Clock      ; Clock    ; None                        ; None                      ; 6.381 ns                ;
+; N/A                                     ; 151.17 MHz ( period = 6.615 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|Q[0]              ; Clock      ; Clock    ; None                        ; None                      ; 6.375 ns                ;
+; N/A                                     ; 151.29 MHz ( period = 6.610 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|Q[5]              ; Clock      ; Clock    ; None                        ; None                      ; 6.364 ns                ;
+; N/A                                     ; 151.95 MHz ( period = 6.581 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[1] ; Datapath:DP|InitRam:modifiedRam|Q[2]              ; Clock      ; Clock    ; None                        ; None                      ; 6.341 ns                ;
+; N/A                                     ; 152.28 MHz ( period = 6.567 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|Q[0]              ; Clock      ; Clock    ; None                        ; None                      ; 6.327 ns                ;
+; N/A                                     ; 152.39 MHz ( period = 6.562 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|Q[5]              ; Clock      ; Clock    ; None                        ; None                      ; 6.316 ns                ;
+; N/A                                     ; 152.56 MHz ( period = 6.555 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[4] ; Datapath:DP|InitRam:modifiedRam|Q[5]              ; Clock      ; Clock    ; None                        ; None                      ; 6.309 ns                ;
+; N/A                                     ; 153.28 MHz ( period = 6.524 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[4] ; Datapath:DP|InitRam:modifiedRam|Q[5]              ; Clock      ; Clock    ; None                        ; None                      ; 6.278 ns                ;
+; N/A                                     ; 153.59 MHz ( period = 6.511 ns )                    ; Datapath:DP|InitRam:modifiedRam|RAM[25][1]         ; Datapath:DP|InitRam:modifiedRam|Q[1]              ; Clock      ; Clock    ; None                        ; None                      ; 6.267 ns                ;
+; N/A                                     ; 154.04 MHz ( period = 6.492 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[4] ; Datapath:DP|InitRam:modifiedRam|Q[4]              ; Clock      ; Clock    ; None                        ; None                      ; 6.252 ns                ;
+; N/A                                     ; 154.11 MHz ( period = 6.489 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|Q[7]              ; Clock      ; Clock    ; None                        ; None                      ; 6.244 ns                ;
+; N/A                                     ; 154.77 MHz ( period = 6.461 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[4] ; Datapath:DP|InitRam:modifiedRam|Q[4]              ; Clock      ; Clock    ; None                        ; None                      ; 6.221 ns                ;
+; N/A                                     ; 155.28 MHz ( period = 6.440 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|Q[4]              ; Clock      ; Clock    ; None                        ; None                      ; 6.200 ns                ;
+; N/A                                     ; 155.59 MHz ( period = 6.427 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[1] ; Datapath:DP|InitRam:modifiedRam|Q[0]              ; Clock      ; Clock    ; None                        ; None                      ; 6.187 ns                ;
+; N/A                                     ; 155.71 MHz ( period = 6.422 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[1] ; Datapath:DP|InitRam:modifiedRam|Q[5]              ; Clock      ; Clock    ; None                        ; None                      ; 6.176 ns                ;
+; N/A                                     ; 156.32 MHz ( period = 6.397 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[1] ; Datapath:DP|InitRam:modifiedRam|Q[6]              ; Clock      ; Clock    ; None                        ; None                      ; 6.163 ns                ;
+; N/A                                     ; 156.79 MHz ( period = 6.378 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|Q[0]              ; Clock      ; Clock    ; None                        ; None                      ; 6.138 ns                ;
+; N/A                                     ; 156.86 MHz ( period = 6.375 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[4] ; Datapath:DP|InitRam:modifiedRam|Q[7]              ; Clock      ; Clock    ; None                        ; None                      ; 6.130 ns                ;
+; N/A                                     ; 157.36 MHz ( period = 6.355 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[23][3]        ; Clock      ; Clock    ; None                        ; None                      ; 6.111 ns                ;
+; N/A                                     ; 157.63 MHz ( period = 6.344 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[4] ; Datapath:DP|InitRam:modifiedRam|Q[7]              ; Clock      ; Clock    ; None                        ; None                      ; 6.099 ns                ;
+; N/A                                     ; 157.98 MHz ( period = 6.330 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|Q[7]              ; Clock      ; Clock    ; None                        ; None                      ; 6.085 ns                ;
+; N/A                                     ; 158.00 MHz ( period = 6.329 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|Q[2]              ; Clock      ; Clock    ; None                        ; None                      ; 6.089 ns                ;
+; N/A                                     ; 158.15 MHz ( period = 6.323 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|Q[7]              ; Clock      ; Clock    ; None                        ; None                      ; 6.078 ns                ;
+; N/A                                     ; 158.18 MHz ( period = 6.322 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|Q[6]              ; Clock      ; Clock    ; None                        ; None                      ; 6.088 ns                ;
+; N/A                                     ; 158.81 MHz ( period = 6.297 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|Q[3]              ; Clock      ; Clock    ; None                        ; None                      ; 6.057 ns                ;
+; N/A                                     ; 159.44 MHz ( period = 6.272 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|Q[0]              ; Clock      ; Clock    ; None                        ; None                      ; 6.032 ns                ;
+; N/A                                     ; 159.82 MHz ( period = 6.257 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|Q[5]              ; Clock      ; Clock    ; None                        ; None                      ; 6.011 ns                ;
+; N/A                                     ; 160.21 MHz ( period = 6.242 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[1] ; Datapath:DP|InitRam:modifiedRam|Q[4]              ; Clock      ; Clock    ; None                        ; None                      ; 6.002 ns                ;
+; N/A                                     ; 160.67 MHz ( period = 6.224 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|Q[1]              ; Clock      ; Clock    ; None                        ; None                      ; 5.976 ns                ;
+; N/A                                     ; 161.26 MHz ( period = 6.201 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[1] ; Datapath:DP|InitRam:modifiedRam|Q[3]              ; Clock      ; Clock    ; None                        ; None                      ; 5.961 ns                ;
+; N/A                                     ; 161.34 MHz ( period = 6.198 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|Q[6]              ; Clock      ; Clock    ; None                        ; None                      ; 5.964 ns                ;
+; N/A                                     ; 161.39 MHz ( period = 6.196 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[23][3]        ; Clock      ; Clock    ; None                        ; None                      ; 5.952 ns                ;
+; N/A                                     ; 161.92 MHz ( period = 6.176 ns )                    ; Datapath:DP|InitRam:modifiedRam|RAM[9][6]          ; Datapath:DP|InitRam:modifiedRam|Q[6]              ; Clock      ; Clock    ; None                        ; None                      ; 5.940 ns                ;
+; N/A                                     ; 162.31 MHz ( period = 6.161 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[1] ; Datapath:DP|InitRam:modifiedRam|Q[2]              ; Clock      ; Clock    ; None                        ; None                      ; 5.921 ns                ;
+; N/A                                     ; 162.42 MHz ( period = 6.157 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[1] ; Datapath:DP|InitRam:modifiedRam|Q[1]              ; Clock      ; Clock    ; None                        ; None                      ; 5.909 ns                ;
+; N/A                                     ; 163.05 MHz ( period = 6.133 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[23][0]        ; Clock      ; Clock    ; None                        ; None                      ; 5.896 ns                ;
+; N/A                                     ; 163.05 MHz ( period = 6.133 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[23][6]        ; Clock      ; Clock    ; None                        ; None                      ; 5.896 ns                ;
+; N/A                                     ; 163.05 MHz ( period = 6.133 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[23][5]        ; Clock      ; Clock    ; None                        ; None                      ; 5.896 ns                ;
+; N/A                                     ; 163.05 MHz ( period = 6.133 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[23][7]        ; Clock      ; Clock    ; None                        ; None                      ; 5.896 ns                ;
+; N/A                                     ; 163.05 MHz ( period = 6.133 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[23][1]        ; Clock      ; Clock    ; None                        ; None                      ; 5.896 ns                ;
+; N/A                                     ; 163.05 MHz ( period = 6.133 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[23][4]        ; Clock      ; Clock    ; None                        ; None                      ; 5.896 ns                ;
+; N/A                                     ; 163.05 MHz ( period = 6.133 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[23][2]        ; Clock      ; Clock    ; None                        ; None                      ; 5.896 ns                ;
+; N/A                                     ; 163.24 MHz ( period = 6.126 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[23][3]        ; Clock      ; Clock    ; None                        ; None                      ; 5.882 ns                ;
+; N/A                                     ; 163.43 MHz ( period = 6.119 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|Q[1]              ; Clock      ; Clock    ; None                        ; None                      ; 5.871 ns                ;
+; N/A                                     ; 163.61 MHz ( period = 6.112 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[7][0]         ; Clock      ; Clock    ; None                        ; None                      ; 5.875 ns                ;
+; N/A                                     ; 163.61 MHz ( period = 6.112 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[7][6]         ; Clock      ; Clock    ; None                        ; None                      ; 5.875 ns                ;
+; N/A                                     ; 163.61 MHz ( period = 6.112 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[7][5]         ; Clock      ; Clock    ; None                        ; None                      ; 5.875 ns                ;
+; N/A                                     ; 163.61 MHz ( period = 6.112 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[7][7]         ; Clock      ; Clock    ; None                        ; None                      ; 5.875 ns                ;
+; N/A                                     ; 163.61 MHz ( period = 6.112 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[7][1]         ; Clock      ; Clock    ; None                        ; None                      ; 5.875 ns                ;
+; N/A                                     ; 163.61 MHz ( period = 6.112 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[7][4]         ; Clock      ; Clock    ; None                        ; None                      ; 5.875 ns                ;
+; N/A                                     ; 163.61 MHz ( period = 6.112 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[7][3]         ; Clock      ; Clock    ; None                        ; None                      ; 5.875 ns                ;
+; N/A                                     ; 163.61 MHz ( period = 6.112 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[7][2]         ; Clock      ; Clock    ; None                        ; None                      ; 5.875 ns                ;
+; N/A                                     ; 163.93 MHz ( period = 6.100 ns )                    ; Datapath:DP|InitRam:modifiedRam|RAM[9][5]          ; Datapath:DP|InitRam:modifiedRam|Q[5]              ; Clock      ; Clock    ; None                        ; None                      ; 5.852 ns                ;
+; N/A                                     ; 165.18 MHz ( period = 6.054 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|Q[4]              ; Clock      ; Clock    ; None                        ; None                      ; 5.814 ns                ;
+; N/A                                     ; 165.18 MHz ( period = 6.054 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[23][3]        ; Clock      ; Clock    ; None                        ; None                      ; 5.810 ns                ;
+; N/A                                     ; 165.43 MHz ( period = 6.045 ns )                    ; Datapath:DP|InitRam:modifiedRam|Q[4]               ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[7] ; Clock      ; Clock    ; None                        ; None                      ; 5.801 ns                ;
+; N/A                                     ; 165.45 MHz ( period = 6.044 ns )                    ; Datapath:DP|InitRam:modifiedRam|RAM[15][6]         ; Datapath:DP|InitRam:modifiedRam|Q[6]              ; Clock      ; Clock    ; None                        ; None                      ; 5.815 ns                ;
+; N/A                                     ; 165.54 MHz ( period = 6.041 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[1] ; Datapath:DP|InitRam:modifiedRam|Q[7]              ; Clock      ; Clock    ; None                        ; None                      ; 5.796 ns                ;
+; N/A                                     ; 165.65 MHz ( period = 6.037 ns )                    ; Datapath:DP|InitRam:modifiedRam|Q[0]               ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[7] ; Clock      ; Clock    ; None                        ; None                      ; 5.793 ns                ;
+; N/A                                     ; 165.84 MHz ( period = 6.030 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|Q[3]              ; Clock      ; Clock    ; None                        ; None                      ; 5.790 ns                ;
+; N/A                                     ; 166.47 MHz ( period = 6.007 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[1] ; Datapath:DP|InitRam:modifiedRam|Q[0]              ; Clock      ; Clock    ; None                        ; None                      ; 5.767 ns                ;
+; N/A                                     ; 166.61 MHz ( period = 6.002 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[1] ; Datapath:DP|InitRam:modifiedRam|Q[5]              ; Clock      ; Clock    ; None                        ; None                      ; 5.756 ns                ;
+; N/A                                     ; 167.31 MHz ( period = 5.977 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[1] ; Datapath:DP|InitRam:modifiedRam|Q[6]              ; Clock      ; Clock    ; None                        ; None                      ; 5.743 ns                ;
+; N/A                                     ; 167.39 MHz ( period = 5.974 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[23][0]        ; Clock      ; Clock    ; None                        ; None                      ; 5.737 ns                ;
+; N/A                                     ; 167.39 MHz ( period = 5.974 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[23][6]        ; Clock      ; Clock    ; None                        ; None                      ; 5.737 ns                ;
+; N/A                                     ; 167.39 MHz ( period = 5.974 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[23][5]        ; Clock      ; Clock    ; None                        ; None                      ; 5.737 ns                ;
+; N/A                                     ; 167.39 MHz ( period = 5.974 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[23][7]        ; Clock      ; Clock    ; None                        ; None                      ; 5.737 ns                ;
+; N/A                                     ; 167.39 MHz ( period = 5.974 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[23][1]        ; Clock      ; Clock    ; None                        ; None                      ; 5.737 ns                ;
+; N/A                                     ; 167.39 MHz ( period = 5.974 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[23][4]        ; Clock      ; Clock    ; None                        ; None                      ; 5.737 ns                ;
+; N/A                                     ; 167.39 MHz ( period = 5.974 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[23][2]        ; Clock      ; Clock    ; None                        ; None                      ; 5.737 ns                ;
+; N/A                                     ; 167.76 MHz ( period = 5.961 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[30][0]        ; Clock      ; Clock    ; None                        ; None                      ; 5.724 ns                ;
+; N/A                                     ; 167.76 MHz ( period = 5.961 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[30][6]        ; Clock      ; Clock    ; None                        ; None                      ; 5.724 ns                ;
+; N/A                                     ; 167.76 MHz ( period = 5.961 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[30][5]        ; Clock      ; Clock    ; None                        ; None                      ; 5.724 ns                ;
+; N/A                                     ; 167.76 MHz ( period = 5.961 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[30][7]        ; Clock      ; Clock    ; None                        ; None                      ; 5.724 ns                ;
+; N/A                                     ; 167.76 MHz ( period = 5.961 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[30][1]        ; Clock      ; Clock    ; None                        ; None                      ; 5.724 ns                ;
+; N/A                                     ; 167.76 MHz ( period = 5.961 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[30][4]        ; Clock      ; Clock    ; None                        ; None                      ; 5.724 ns                ;
+; N/A                                     ; 167.76 MHz ( period = 5.961 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[30][3]        ; Clock      ; Clock    ; None                        ; None                      ; 5.724 ns                ;
+; N/A                                     ; 167.76 MHz ( period = 5.961 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[30][2]        ; Clock      ; Clock    ; None                        ; None                      ; 5.724 ns                ;
+; N/A                                     ; 167.90 MHz ( period = 5.956 ns )                    ; Datapath:DP|InitRam:modifiedRam|RAM[21][3]         ; Datapath:DP|InitRam:modifiedRam|Q[3]              ; Clock      ; Clock    ; None                        ; None                      ; 5.730 ns                ;
+; N/A                                     ; 167.98 MHz ( period = 5.953 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[7][0]         ; Clock      ; Clock    ; None                        ; None                      ; 5.716 ns                ;
+; N/A                                     ; 167.98 MHz ( period = 5.953 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[7][6]         ; Clock      ; Clock    ; None                        ; None                      ; 5.716 ns                ;
+; N/A                                     ; 167.98 MHz ( period = 5.953 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[7][5]         ; Clock      ; Clock    ; None                        ; None                      ; 5.716 ns                ;
+; N/A                                     ; 167.98 MHz ( period = 5.953 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[7][7]         ; Clock      ; Clock    ; None                        ; None                      ; 5.716 ns                ;
+; N/A                                     ; 167.98 MHz ( period = 5.953 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[7][1]         ; Clock      ; Clock    ; None                        ; None                      ; 5.716 ns                ;
+; N/A                                     ; 167.98 MHz ( period = 5.953 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[7][4]         ; Clock      ; Clock    ; None                        ; None                      ; 5.716 ns                ;
+; N/A                                     ; 167.98 MHz ( period = 5.953 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[7][3]         ; Clock      ; Clock    ; None                        ; None                      ; 5.716 ns                ;
+; N/A                                     ; 167.98 MHz ( period = 5.953 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[7][2]         ; Clock      ; Clock    ; None                        ; None                      ; 5.716 ns                ;
+; N/A                                     ; 168.32 MHz ( period = 5.941 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|Q[2]              ; Clock      ; Clock    ; None                        ; None                      ; 5.701 ns                ;
+; N/A                                     ; 168.41 MHz ( period = 5.938 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[30][0]        ; Clock      ; Clock    ; None                        ; None                      ; 5.701 ns                ;
+; N/A                                     ; 168.41 MHz ( period = 5.938 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[30][6]        ; Clock      ; Clock    ; None                        ; None                      ; 5.701 ns                ;
+; N/A                                     ; 168.41 MHz ( period = 5.938 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[30][5]        ; Clock      ; Clock    ; None                        ; None                      ; 5.701 ns                ;
+; N/A                                     ; 168.41 MHz ( period = 5.938 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[30][7]        ; Clock      ; Clock    ; None                        ; None                      ; 5.701 ns                ;
+; N/A                                     ; 168.41 MHz ( period = 5.938 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[30][1]        ; Clock      ; Clock    ; None                        ; None                      ; 5.701 ns                ;
+; N/A                                     ; 168.41 MHz ( period = 5.938 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[30][4]        ; Clock      ; Clock    ; None                        ; None                      ; 5.701 ns                ;
+; N/A                                     ; 168.41 MHz ( period = 5.938 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[30][3]        ; Clock      ; Clock    ; None                        ; None                      ; 5.701 ns                ;
+; N/A                                     ; 168.41 MHz ( period = 5.938 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[30][2]        ; Clock      ; Clock    ; None                        ; None                      ; 5.701 ns                ;
+; N/A                                     ; 168.89 MHz ( period = 5.921 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[18][0]        ; Clock      ; Clock    ; None                        ; None                      ; 5.683 ns                ;
+; N/A                                     ; 168.89 MHz ( period = 5.921 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[18][6]        ; Clock      ; Clock    ; None                        ; None                      ; 5.683 ns                ;
+; N/A                                     ; 168.89 MHz ( period = 5.921 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[18][5]        ; Clock      ; Clock    ; None                        ; None                      ; 5.683 ns                ;
+; N/A                                     ; 168.89 MHz ( period = 5.921 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[18][7]        ; Clock      ; Clock    ; None                        ; None                      ; 5.683 ns                ;
+; N/A                                     ; 168.89 MHz ( period = 5.921 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[18][1]        ; Clock      ; Clock    ; None                        ; None                      ; 5.683 ns                ;
+; N/A                                     ; 168.89 MHz ( period = 5.921 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[18][2]        ; Clock      ; Clock    ; None                        ; None                      ; 5.683 ns                ;
+; N/A                                     ; 168.89 MHz ( period = 5.921 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[18][4]        ; Clock      ; Clock    ; None                        ; None                      ; 5.683 ns                ;
+; N/A                                     ; 168.89 MHz ( period = 5.921 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[18][3]        ; Clock      ; Clock    ; None                        ; None                      ; 5.683 ns                ;
+; N/A                                     ; 169.12 MHz ( period = 5.913 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[30][0]        ; Clock      ; Clock    ; None                        ; None                      ; 5.676 ns                ;
+; N/A                                     ; 169.12 MHz ( period = 5.913 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[30][6]        ; Clock      ; Clock    ; None                        ; None                      ; 5.676 ns                ;
+; N/A                                     ; 169.12 MHz ( period = 5.913 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[30][5]        ; Clock      ; Clock    ; None                        ; None                      ; 5.676 ns                ;
+; N/A                                     ; 169.12 MHz ( period = 5.913 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[30][7]        ; Clock      ; Clock    ; None                        ; None                      ; 5.676 ns                ;
+; N/A                                     ; 169.12 MHz ( period = 5.913 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[30][1]        ; Clock      ; Clock    ; None                        ; None                      ; 5.676 ns                ;
+; N/A                                     ; 169.12 MHz ( period = 5.913 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[30][4]        ; Clock      ; Clock    ; None                        ; None                      ; 5.676 ns                ;
+; N/A                                     ; 169.12 MHz ( period = 5.913 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[30][3]        ; Clock      ; Clock    ; None                        ; None                      ; 5.676 ns                ;
+; N/A                                     ; 169.12 MHz ( period = 5.913 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[30][2]        ; Clock      ; Clock    ; None                        ; None                      ; 5.676 ns                ;
+; N/A                                     ; 169.15 MHz ( period = 5.912 ns )                    ; Datapath:DP|InitRam:modifiedRam|RAM[9][4]          ; Datapath:DP|InitRam:modifiedRam|Q[4]              ; Clock      ; Clock    ; None                        ; None                      ; 5.670 ns                ;
+; N/A                                     ; 169.23 MHz ( period = 5.909 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|Q[5]              ; Clock      ; Clock    ; None                        ; None                      ; 5.663 ns                ;
+; N/A                                     ; 169.38 MHz ( period = 5.904 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[23][0]        ; Clock      ; Clock    ; None                        ; None                      ; 5.667 ns                ;
+; N/A                                     ; 169.38 MHz ( period = 5.904 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[23][6]        ; Clock      ; Clock    ; None                        ; None                      ; 5.667 ns                ;
+; N/A                                     ; 169.38 MHz ( period = 5.904 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[23][5]        ; Clock      ; Clock    ; None                        ; None                      ; 5.667 ns                ;
+; N/A                                     ; 169.38 MHz ( period = 5.904 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[23][7]        ; Clock      ; Clock    ; None                        ; None                      ; 5.667 ns                ;
+; N/A                                     ; 169.38 MHz ( period = 5.904 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[23][1]        ; Clock      ; Clock    ; None                        ; None                      ; 5.667 ns                ;
+; N/A                                     ; 169.38 MHz ( period = 5.904 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[23][4]        ; Clock      ; Clock    ; None                        ; None                      ; 5.667 ns                ;
+; N/A                                     ; 169.38 MHz ( period = 5.904 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[23][2]        ; Clock      ; Clock    ; None                        ; None                      ; 5.667 ns                ;
+; N/A                                     ; 169.66 MHz ( period = 5.894 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|Q[7]              ; Clock      ; Clock    ; None                        ; None                      ; 5.649 ns                ;
+; N/A                                     ; 169.87 MHz ( period = 5.887 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[30][0]        ; Clock      ; Clock    ; None                        ; None                      ; 5.650 ns                ;
+; N/A                                     ; 169.87 MHz ( period = 5.887 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[30][6]        ; Clock      ; Clock    ; None                        ; None                      ; 5.650 ns                ;
+; N/A                                     ; 169.87 MHz ( period = 5.887 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[30][5]        ; Clock      ; Clock    ; None                        ; None                      ; 5.650 ns                ;
+; N/A                                     ; 169.87 MHz ( period = 5.887 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[30][7]        ; Clock      ; Clock    ; None                        ; None                      ; 5.650 ns                ;
+; N/A                                     ; 169.87 MHz ( period = 5.887 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[30][1]        ; Clock      ; Clock    ; None                        ; None                      ; 5.650 ns                ;
+; N/A                                     ; 169.87 MHz ( period = 5.887 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[30][4]        ; Clock      ; Clock    ; None                        ; None                      ; 5.650 ns                ;
+; N/A                                     ; 169.87 MHz ( period = 5.887 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[30][3]        ; Clock      ; Clock    ; None                        ; None                      ; 5.650 ns                ;
+; N/A                                     ; 169.87 MHz ( period = 5.887 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[30][2]        ; Clock      ; Clock    ; None                        ; None                      ; 5.650 ns                ;
+; N/A                                     ; 169.98 MHz ( period = 5.883 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[7][0]         ; Clock      ; Clock    ; None                        ; None                      ; 5.646 ns                ;
+; N/A                                     ; 169.98 MHz ( period = 5.883 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[7][6]         ; Clock      ; Clock    ; None                        ; None                      ; 5.646 ns                ;
+; N/A                                     ; 169.98 MHz ( period = 5.883 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[7][5]         ; Clock      ; Clock    ; None                        ; None                      ; 5.646 ns                ;
+; N/A                                     ; 169.98 MHz ( period = 5.883 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[7][7]         ; Clock      ; Clock    ; None                        ; None                      ; 5.646 ns                ;
+; N/A                                     ; 169.98 MHz ( period = 5.883 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[7][1]         ; Clock      ; Clock    ; None                        ; None                      ; 5.646 ns                ;
+; N/A                                     ; 169.98 MHz ( period = 5.883 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[7][4]         ; Clock      ; Clock    ; None                        ; None                      ; 5.646 ns                ;
+; N/A                                     ; 169.98 MHz ( period = 5.883 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[7][3]         ; Clock      ; Clock    ; None                        ; None                      ; 5.646 ns                ;
+; N/A                                     ; 169.98 MHz ( period = 5.883 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[2] ; Datapath:DP|InitRam:modifiedRam|RAM[7][2]         ; Clock      ; Clock    ; None                        ; None                      ; 5.646 ns                ;
+; N/A                                     ; 170.27 MHz ( period = 5.873 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[18][0]        ; Clock      ; Clock    ; None                        ; None                      ; 5.635 ns                ;
+; N/A                                     ; 170.27 MHz ( period = 5.873 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[18][6]        ; Clock      ; Clock    ; None                        ; None                      ; 5.635 ns                ;
+; N/A                                     ; 170.27 MHz ( period = 5.873 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[18][5]        ; Clock      ; Clock    ; None                        ; None                      ; 5.635 ns                ;
+; N/A                                     ; 170.27 MHz ( period = 5.873 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[18][7]        ; Clock      ; Clock    ; None                        ; None                      ; 5.635 ns                ;
+; N/A                                     ; 170.27 MHz ( period = 5.873 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[18][1]        ; Clock      ; Clock    ; None                        ; None                      ; 5.635 ns                ;
+; N/A                                     ; 170.27 MHz ( period = 5.873 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[18][2]        ; Clock      ; Clock    ; None                        ; None                      ; 5.635 ns                ;
+; N/A                                     ; 170.27 MHz ( period = 5.873 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[18][4]        ; Clock      ; Clock    ; None                        ; None                      ; 5.635 ns                ;
+; N/A                                     ; 170.27 MHz ( period = 5.873 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[18][3]        ; Clock      ; Clock    ; None                        ; None                      ; 5.635 ns                ;
+; N/A                                     ; 170.30 MHz ( period = 5.872 ns )                    ; Datapath:DP|InitRam:modifiedRam|Q[2]               ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[7] ; Clock      ; Clock    ; None                        ; None                      ; 5.628 ns                ;
+; N/A                                     ; 170.50 MHz ( period = 5.865 ns )                    ; Datapath:DP|InitRam:modifiedRam|RAM[7][2]          ; Datapath:DP|InitRam:modifiedRam|Q[2]              ; Clock      ; Clock    ; None                        ; None                      ; 5.623 ns                ;
+; N/A                                     ; 170.50 MHz ( period = 5.865 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[3][5]         ; Clock      ; Clock    ; None                        ; None                      ; 5.628 ns                ;
+; N/A                                     ; 170.50 MHz ( period = 5.865 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[3][7]         ; Clock      ; Clock    ; None                        ; None                      ; 5.628 ns                ;
+; N/A                                     ; 170.50 MHz ( period = 5.865 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[3][6]         ; Clock      ; Clock    ; None                        ; None                      ; 5.628 ns                ;
+; N/A                                     ; 170.50 MHz ( period = 5.865 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[3][1]         ; Clock      ; Clock    ; None                        ; None                      ; 5.628 ns                ;
+; N/A                                     ; 170.50 MHz ( period = 5.865 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[3][4]         ; Clock      ; Clock    ; None                        ; None                      ; 5.628 ns                ;
+; N/A                                     ; 170.50 MHz ( period = 5.865 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[3][2]         ; Clock      ; Clock    ; None                        ; None                      ; 5.628 ns                ;
+; N/A                                     ; 170.85 MHz ( period = 5.853 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[31][0]        ; Clock      ; Clock    ; None                        ; None                      ; 5.618 ns                ;
+; N/A                                     ; 170.85 MHz ( period = 5.853 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[31][6]        ; Clock      ; Clock    ; None                        ; None                      ; 5.618 ns                ;
+; N/A                                     ; 170.85 MHz ( period = 5.853 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[31][5]        ; Clock      ; Clock    ; None                        ; None                      ; 5.618 ns                ;
+; N/A                                     ; 170.85 MHz ( period = 5.853 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[31][7]        ; Clock      ; Clock    ; None                        ; None                      ; 5.618 ns                ;
+; N/A                                     ; 170.85 MHz ( period = 5.853 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[31][1]        ; Clock      ; Clock    ; None                        ; None                      ; 5.618 ns                ;
+; N/A                                     ; 170.85 MHz ( period = 5.853 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[31][4]        ; Clock      ; Clock    ; None                        ; None                      ; 5.618 ns                ;
+; N/A                                     ; 170.85 MHz ( period = 5.853 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[31][3]        ; Clock      ; Clock    ; None                        ; None                      ; 5.618 ns                ;
+; N/A                                     ; 170.85 MHz ( period = 5.853 ns )                    ; ControlUnit:CU|state.decode                        ; Datapath:DP|InitRam:modifiedRam|RAM[31][2]        ; Clock      ; Clock    ; None                        ; None                      ; 5.618 ns                ;
+; N/A                                     ; 171.17 MHz ( period = 5.842 ns )                    ; Datapath:DP|InitRam:modifiedRam|RAM[27][1]         ; Datapath:DP|InitRam:modifiedRam|Q[1]              ; Clock      ; Clock    ; None                        ; None                      ; 5.590 ns                ;
+; N/A                                     ; 171.26 MHz ( period = 5.839 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[19][0]        ; Clock      ; Clock    ; None                        ; None                      ; 5.602 ns                ;
+; N/A                                     ; 171.26 MHz ( period = 5.839 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[19][5]        ; Clock      ; Clock    ; None                        ; None                      ; 5.602 ns                ;
+; N/A                                     ; 171.26 MHz ( period = 5.839 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[19][7]        ; Clock      ; Clock    ; None                        ; None                      ; 5.602 ns                ;
+; N/A                                     ; 171.26 MHz ( period = 5.839 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[19][6]        ; Clock      ; Clock    ; None                        ; None                      ; 5.602 ns                ;
+; N/A                                     ; 171.26 MHz ( period = 5.839 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[19][1]        ; Clock      ; Clock    ; None                        ; None                      ; 5.602 ns                ;
+; N/A                                     ; 171.26 MHz ( period = 5.839 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3] ; Datapath:DP|InitRam:modifiedRam|RAM[19][4]        ; Clock      ; Clock    ; None                        ; None                      ; 5.602 ns                ;
+; N/A                                     ; 171.47 MHz ( period = 5.832 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[23][0]        ; Clock      ; Clock    ; None                        ; None                      ; 5.595 ns                ;
+; N/A                                     ; 171.47 MHz ( period = 5.832 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[23][6]        ; Clock      ; Clock    ; None                        ; None                      ; 5.595 ns                ;
+; N/A                                     ; 171.47 MHz ( period = 5.832 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[23][5]        ; Clock      ; Clock    ; None                        ; None                      ; 5.595 ns                ;
+; N/A                                     ; 171.47 MHz ( period = 5.832 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[23][7]        ; Clock      ; Clock    ; None                        ; None                      ; 5.595 ns                ;
+; N/A                                     ; 171.47 MHz ( period = 5.832 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[23][1]        ; Clock      ; Clock    ; None                        ; None                      ; 5.595 ns                ;
+; N/A                                     ; 171.47 MHz ( period = 5.832 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[23][4]        ; Clock      ; Clock    ; None                        ; None                      ; 5.595 ns                ;
+; N/A                                     ; 171.47 MHz ( period = 5.832 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[23][2]        ; Clock      ; Clock    ; None                        ; None                      ; 5.595 ns                ;
+; N/A                                     ; 171.76 MHz ( period = 5.822 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:IR_reg|Output[1] ; Datapath:DP|InitRam:modifiedRam|Q[4]              ; Clock      ; Clock    ; None                        ; None                      ; 5.582 ns                ;
+; N/A                                     ; 171.97 MHz ( period = 5.815 ns )                    ; Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[1] ; Datapath:DP|InitRam:modifiedRam|RAM[23][3]        ; Clock      ; Clock    ; None                        ; None                      ; 5.571 ns                ;
+; N/A                                     ; 172.00 MHz ( period = 5.814 ns )                    ; Datapath:DP|InitRam:modifiedRam|RAM[13][5]         ; Datapath:DP|InitRam:modifiedRam|Q[5]              ; Clock      ; Clock    ; None                        ; None                      ; 5.573 ns                ;
+; N/A                                     ; 172.09 MHz ( period = 5.811 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[7][1]         ; Clock      ; Clock    ; None                        ; None                      ; 5.574 ns                ;
+; N/A                                     ; 172.09 MHz ( period = 5.811 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[7][4]         ; Clock      ; Clock    ; None                        ; None                      ; 5.574 ns                ;
+; N/A                                     ; 172.09 MHz ( period = 5.811 ns )                    ; ControlUnit:CU|state.store                         ; Datapath:DP|InitRam:modifiedRam|RAM[7][3]         ; Clock      ; Clock    ; None                        ; None                      ; 5.574 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                                    ;                                                   ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------------------------+---------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                                         ;
++-----------------------------------------+-----------------------------------------------------+------------+--------+--------------------------------------------+----------+
+; Slack                                   ; Required tsu                                        ; Actual tsu ; From   ; To                                         ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+--------+--------------------------------------------+----------+
+; N/A                                     ; None                                                ; 4.197 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[13][0] ; Clock    ;
+; N/A                                     ; None                                                ; 4.123 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[9][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 4.049 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[5][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.984 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[29][0] ; Clock    ;
+; N/A                                     ; None                                                ; 3.984 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[29][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.984 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[29][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.984 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[29][7] ; Clock    ;
+; N/A                                     ; None                                                ; 3.984 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[29][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.984 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[29][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.984 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[29][2] ; Clock    ;
+; N/A                                     ; None                                                ; 3.984 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[29][3] ; Clock    ;
+; N/A                                     ; None                                                ; 3.973 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[27][0] ; Clock    ;
+; N/A                                     ; None                                                ; 3.973 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[27][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.973 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[27][7] ; Clock    ;
+; N/A                                     ; None                                                ; 3.973 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[27][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.973 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[27][3] ; Clock    ;
+; N/A                                     ; None                                                ; 3.973 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[27][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.973 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[27][2] ; Clock    ;
+; N/A                                     ; None                                                ; 3.973 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[27][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.943 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[1][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.761 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|Q[7]       ; Clock    ;
+; N/A                                     ; None                                                ; 3.719 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[11][0] ; Clock    ;
+; N/A                                     ; None                                                ; 3.719 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[11][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.719 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[11][7] ; Clock    ;
+; N/A                                     ; None                                                ; 3.719 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[11][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.719 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[11][3] ; Clock    ;
+; N/A                                     ; None                                                ; 3.719 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[11][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.719 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[11][2] ; Clock    ;
+; N/A                                     ; None                                                ; 3.719 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[11][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.706 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[16][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.667 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[13][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.667 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[13][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.667 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[13][7] ; Clock    ;
+; N/A                                     ; None                                                ; 3.667 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[13][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.667 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[13][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.667 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[13][2] ; Clock    ;
+; N/A                                     ; None                                                ; 3.667 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[13][3] ; Clock    ;
+; N/A                                     ; None                                                ; 3.657 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[4][6]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.657 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[16][2] ; Clock    ;
+; N/A                                     ; None                                                ; 3.601 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[20][0] ; Clock    ;
+; N/A                                     ; None                                                ; 3.601 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[20][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.601 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[20][7] ; Clock    ;
+; N/A                                     ; None                                                ; 3.601 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[20][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.601 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[20][3] ; Clock    ;
+; N/A                                     ; None                                                ; 3.601 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[20][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.601 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[20][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.601 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[20][2] ; Clock    ;
+; N/A                                     ; None                                                ; 3.595 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[23][3] ; Clock    ;
+; N/A                                     ; None                                                ; 3.561 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[9][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.561 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[9][6]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.561 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[9][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.561 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[9][7]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.561 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[9][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.561 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[9][4]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.561 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[9][3]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.550 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[0][4]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.549 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[2][4]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.539 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[0][7]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.538 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[2][7]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.529 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[25][7] ; Clock    ;
+; N/A                                     ; None                                                ; 3.515 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[17][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.509 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[1][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.474 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[7][3]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.472 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[25][0] ; Clock    ;
+; N/A                                     ; None                                                ; 3.472 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[25][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.472 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[25][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.472 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[25][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.472 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[25][2] ; Clock    ;
+; N/A                                     ; None                                                ; 3.472 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[25][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.472 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[25][3] ; Clock    ;
+; N/A                                     ; None                                                ; 3.449 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[0][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.441 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[30][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.382 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[24][0] ; Clock    ;
+; N/A                                     ; None                                                ; 3.382 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[24][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.382 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[24][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.382 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[24][7] ; Clock    ;
+; N/A                                     ; None                                                ; 3.382 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[24][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.382 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[24][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.382 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[24][3] ; Clock    ;
+; N/A                                     ; None                                                ; 3.382 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[24][2] ; Clock    ;
+; N/A                                     ; None                                                ; 3.377 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[2][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.377 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[0][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.375 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[4][7]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.373 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[23][0] ; Clock    ;
+; N/A                                     ; None                                                ; 3.373 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[23][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.373 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[23][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.373 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[23][7] ; Clock    ;
+; N/A                                     ; None                                                ; 3.373 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[23][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.373 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[23][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.373 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[23][2] ; Clock    ;
+; N/A                                     ; None                                                ; 3.355 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[31][0] ; Clock    ;
+; N/A                                     ; None                                                ; 3.355 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[31][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.355 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[31][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.355 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[31][7] ; Clock    ;
+; N/A                                     ; None                                                ; 3.355 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[31][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.355 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[31][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.355 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[31][3] ; Clock    ;
+; N/A                                     ; None                                                ; 3.355 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[31][2] ; Clock    ;
+; N/A                                     ; None                                                ; 3.350 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[4][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.347 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[12][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.342 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[7][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.342 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[7][6]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.342 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[7][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.342 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[7][7]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.342 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[7][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.342 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[7][4]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.342 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[7][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.310 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[3][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.308 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[4][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.305 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[5][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.305 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[12][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.293 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[3][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.293 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[3][7]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.293 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[3][6]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.293 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[3][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.293 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[3][4]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.293 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[3][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.283 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[0][6]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.279 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[8][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.278 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[19][0] ; Clock    ;
+; N/A                                     ; None                                                ; 3.278 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[19][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.278 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[19][7] ; Clock    ;
+; N/A                                     ; None                                                ; 3.278 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[19][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.278 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[19][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.278 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[19][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.270 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[8][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.268 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[16][0] ; Clock    ;
+; N/A                                     ; None                                                ; 3.268 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[16][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.268 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[16][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.268 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[16][7] ; Clock    ;
+; N/A                                     ; None                                                ; 3.268 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[16][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.268 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[16][3] ; Clock    ;
+; N/A                                     ; None                                                ; 3.256 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[17][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.255 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[10][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.252 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[14][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.193 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[3][3]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.180 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[15][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.177 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[12][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.177 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[4][4]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.146 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[18][0] ; Clock    ;
+; N/A                                     ; None                                                ; 3.146 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[18][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.146 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[18][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.146 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[18][7] ; Clock    ;
+; N/A                                     ; None                                                ; 3.146 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[18][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.146 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[18][2] ; Clock    ;
+; N/A                                     ; None                                                ; 3.146 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[18][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.146 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[18][3] ; Clock    ;
+; N/A                                     ; None                                                ; 3.129 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[8][6]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.121 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[30][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.113 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|Q[6]       ; Clock    ;
+; N/A                                     ; None                                                ; 3.112 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[12][3] ; Clock    ;
+; N/A                                     ; None                                                ; 3.110 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[15][3] ; Clock    ;
+; N/A                                     ; None                                                ; 3.108 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[28][0] ; Clock    ;
+; N/A                                     ; None                                                ; 3.108 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[28][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.108 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[28][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.108 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[28][3] ; Clock    ;
+; N/A                                     ; None                                                ; 3.108 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[28][2] ; Clock    ;
+; N/A                                     ; None                                                ; 3.107 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[4][3]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.097 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[1][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.095 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[5][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.092 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[28][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.092 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[28][7] ; Clock    ;
+; N/A                                     ; None                                                ; 3.092 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[28][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.076 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[15][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.056 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[4][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.056 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[10][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.056 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[4][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.055 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[14][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.053 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[30][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.040 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[8][4]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.039 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|Q[1]       ; Clock    ;
+; N/A                                     ; None                                                ; 3.028 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[26][0] ; Clock    ;
+; N/A                                     ; None                                                ; 3.028 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[26][6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.028 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[26][5] ; Clock    ;
+; N/A                                     ; None                                                ; 3.028 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[26][7] ; Clock    ;
+; N/A                                     ; None                                                ; 3.028 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[26][1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.028 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[26][4] ; Clock    ;
+; N/A                                     ; None                                                ; 3.028 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[26][2] ; Clock    ;
+; N/A                                     ; None                                                ; 3.028 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[26][3] ; Clock    ;
+; N/A                                     ; None                                                ; 3.014 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[5][6]  ; Clock    ;
+; N/A                                     ; None                                                ; 3.001 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[1][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 2.992 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[15][0] ; Clock    ;
+; N/A                                     ; None                                                ; 2.992 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[15][7] ; Clock    ;
+; N/A                                     ; None                                                ; 2.992 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[15][1] ; Clock    ;
+; N/A                                     ; None                                                ; 2.992 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[15][4] ; Clock    ;
+; N/A                                     ; None                                                ; 2.992 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[15][2] ; Clock    ;
+; N/A                                     ; None                                                ; 2.984 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[8][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 2.984 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[8][7]  ; Clock    ;
+; N/A                                     ; None                                                ; 2.984 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[8][3]  ; Clock    ;
+; N/A                                     ; None                                                ; 2.984 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[8][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 2.982 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[6][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 2.932 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[19][3] ; Clock    ;
+; N/A                                     ; None                                                ; 2.932 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[19][2] ; Clock    ;
+; N/A                                     ; None                                                ; 2.859 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[2][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 2.857 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[0][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 2.820 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[30][0] ; Clock    ;
+; N/A                                     ; None                                                ; 2.812 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[2][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 2.812 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[2][3]  ; Clock    ;
+; N/A                                     ; None                                                ; 2.805 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[17][3] ; Clock    ;
+; N/A                                     ; None                                                ; 2.771 ns   ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[1][6]  ; Clock    ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;        ;                                            ;          ;
++-----------------------------------------+-----------------------------------------------------+------------+--------+--------------------------------------------+----------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                          ;
++-------+--------------+------------+---------------------------------------------------+---------+------------+
+; Slack ; Required tco ; Actual tco ; From                                              ; To      ; From Clock ;
++-------+--------------+------------+---------------------------------------------------+---------+------------+
+; N/A   ; None         ; 13.169 ns  ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[4] ; LEDG[4] ; Clock      ;
+; N/A   ; None         ; 12.976 ns  ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[1] ; LEDG[1] ; Clock      ;
+; N/A   ; None         ; 12.860 ns  ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[0] ; LEDG[0] ; Clock      ;
+; N/A   ; None         ; 12.796 ns  ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[5] ; LEDG[5] ; Clock      ;
+; N/A   ; None         ; 12.753 ns  ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[3] ; LEDG[3] ; Clock      ;
+; N/A   ; None         ; 12.721 ns  ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[7] ; LEDG[7] ; Clock      ;
+; N/A   ; None         ; 12.566 ns  ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[2] ; LEDG[2] ; Clock      ;
+; N/A   ; None         ; 12.538 ns  ; ControlUnit:CU|state.halt                         ; LEDR[9] ; Clock      ;
+; N/A   ; None         ; 11.733 ns  ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[6] ; LEDG[6] ; Clock      ;
++-------+--------------+------------+---------------------------------------------------+---------+------------+
+
+
++----------------------------------------------------------------+
+; tpd                                                            ;
++-------+-------------------+-----------------+--------+---------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From   ; To      ;
++-------+-------------------+-----------------+--------+---------+
+; N/A   ; None              ; 8.897 ns        ; KEY[2] ; LEDR[8] ;
+; N/A   ; None              ; 6.716 ns        ; SW[7]  ; LEDR[7] ;
+; N/A   ; None              ; 6.537 ns        ; SW[3]  ; LEDR[3] ;
+; N/A   ; None              ; 6.104 ns        ; SW[5]  ; LEDR[5] ;
+; N/A   ; None              ; 5.387 ns        ; SW[2]  ; LEDR[2] ;
+; N/A   ; None              ; 5.327 ns        ; SW[4]  ; LEDR[4] ;
+; N/A   ; None              ; 5.234 ns        ; SW[6]  ; LEDR[6] ;
+; N/A   ; None              ; 4.978 ns        ; SW[1]  ; LEDR[1] ;
+; N/A   ; None              ; 4.635 ns        ; SW[0]  ; LEDR[0] ;
++-------+-------------------+-----------------+--------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                                                ;
++-----------------------------------------+-----------------------------------------------------+-----------+--------+---------------------------------------------------+----------+
+; Minimum Slack                           ; Required th                                         ; Actual th ; From   ; To                                                ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+-----------+--------+---------------------------------------------------+----------+
+; N/A                                     ; None                                                ; 4.053 ns  ; SW[2]  ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[2] ; Clock    ;
+; N/A                                     ; None                                                ; 3.804 ns  ; SW[6]  ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[6] ; Clock    ;
+; N/A                                     ; None                                                ; 3.733 ns  ; SW[0]  ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[0] ; Clock    ;
+; N/A                                     ; None                                                ; 3.630 ns  ; SW[1]  ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[1] ; Clock    ;
+; N/A                                     ; None                                                ; 3.262 ns  ; SW[7]  ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[7] ; Clock    ;
+; N/A                                     ; None                                                ; 3.124 ns  ; SW[3]  ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[3] ; Clock    ;
+; N/A                                     ; None                                                ; 2.802 ns  ; SW[5]  ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[5] ; Clock    ;
+; N/A                                     ; None                                                ; 2.597 ns  ; SW[4]  ; Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[4] ; Clock    ;
+; N/A                                     ; None                                                ; -0.669 ns ; KEY[2] ; ControlUnit:CU|state.Input                        ; Clock    ;
+; N/A                                     ; None                                                ; -0.669 ns ; KEY[2] ; ControlUnit:CU|state.start                        ; Clock    ;
+; N/A                                     ; None                                                ; -0.734 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[2][5]         ; Clock    ;
+; N/A                                     ; None                                                ; -0.736 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[6][7]         ; Clock    ;
+; N/A                                     ; None                                                ; -0.737 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[6][3]         ; Clock    ;
+; N/A                                     ; None                                                ; -0.738 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[6][5]         ; Clock    ;
+; N/A                                     ; None                                                ; -0.864 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[11][1]        ; Clock    ;
+; N/A                                     ; None                                                ; -0.864 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[9][4]         ; Clock    ;
+; N/A                                     ; None                                                ; -0.867 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[11][6]        ; Clock    ;
+; N/A                                     ; None                                                ; -0.868 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[11][4]        ; Clock    ;
+; N/A                                     ; None                                                ; -0.927 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[17][0]        ; Clock    ;
+; N/A                                     ; None                                                ; -0.947 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[30][7]        ; Clock    ;
+; N/A                                     ; None                                                ; -0.983 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[14][3]        ; Clock    ;
+; N/A                                     ; None                                                ; -0.990 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[14][6]        ; Clock    ;
+; N/A                                     ; None                                                ; -1.176 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[31][2]        ; Clock    ;
+; N/A                                     ; None                                                ; -1.233 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[12][0]        ; Clock    ;
+; N/A                                     ; None                                                ; -1.237 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[12][2]        ; Clock    ;
+; N/A                                     ; None                                                ; -1.238 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[16][1]        ; Clock    ;
+; N/A                                     ; None                                                ; -1.339 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[9][6]         ; Clock    ;
+; N/A                                     ; None                                                ; -1.470 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[11][5]        ; Clock    ;
+; N/A                                     ; None                                                ; -1.601 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[8][3]         ; Clock    ;
+; N/A                                     ; None                                                ; -1.648 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|Q[0]              ; Clock    ;
+; N/A                                     ; None                                                ; -1.648 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|Q[4]              ; Clock    ;
+; N/A                                     ; None                                                ; -1.648 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|Q[3]              ; Clock    ;
+; N/A                                     ; None                                                ; -1.648 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|Q[2]              ; Clock    ;
+; N/A                                     ; None                                                ; -1.662 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[4][7]         ; Clock    ;
+; N/A                                     ; None                                                ; -1.670 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[8][0]         ; Clock    ;
+; N/A                                     ; None                                                ; -1.705 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[10][3]        ; Clock    ;
+; N/A                                     ; None                                                ; -1.715 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[10][6]        ; Clock    ;
+; N/A                                     ; None                                                ; -1.726 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[4][2]         ; Clock    ;
+; N/A                                     ; None                                                ; -1.731 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[6][1]         ; Clock    ;
+; N/A                                     ; None                                                ; -1.860 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[9][5]         ; Clock    ;
+; N/A                                     ; None                                                ; -1.865 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[6][4]         ; Clock    ;
+; N/A                                     ; None                                                ; -1.880 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[11][3]        ; Clock    ;
+; N/A                                     ; None                                                ; -1.936 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[5][1]         ; Clock    ;
+; N/A                                     ; None                                                ; -1.943 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[31][7]        ; Clock    ;
+; N/A                                     ; None                                                ; -1.996 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[3][4]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.059 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[6][6]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.059 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[2][6]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.066 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[15][7]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.076 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[16][7]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.077 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[10][0]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.088 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[17][7]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.117 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[13][2]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.118 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[17][5]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.119 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[15][2]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.121 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[13][5]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.122 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[4][0]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.168 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[4][6]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.170 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[0][6]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.175 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[30][1]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.212 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[31][5]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.213 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[8][7]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.218 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[15][4]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.225 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[14][0]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.225 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[17][4]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.231 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[31][1]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.233 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[5][7]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.240 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[2][3]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.242 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[0][3]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.277 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[22][0]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.277 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[22][6]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.277 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[22][5]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.277 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[22][7]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.277 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[22][3]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.277 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[22][1]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.277 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[22][2]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.277 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[22][4]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.287 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[5][0]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.320 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[14][5]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.322 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[10][5]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.322 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[13][7]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.333 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[31][4]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.342 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[7][0]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.366 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[30][3]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.370 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[13][4]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.376 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[15][1]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.390 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[30][0]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.390 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[30][6]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.390 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[30][5]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.390 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[30][4]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.390 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[30][2]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.391 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[15][0]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.399 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[5][4]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.400 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[14][7]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.400 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[14][1]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.400 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[14][4]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.400 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[14][2]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.400 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[1][4]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.405 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[17][2]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.412 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[8][2]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.415 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[1][7]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.419 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[10][2]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.421 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[12][6]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.421 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[7][1]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.434 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[2][1]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.437 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[0][1]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.450 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[16][3]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.455 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[0][0]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.455 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[0][5]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.455 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[0][7]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.455 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[0][4]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.455 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[0][2]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.459 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[16][6]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.461 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[6][0]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.461 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[10][7]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.461 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[10][1]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.461 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[10][4]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.461 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[6][2]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.463 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[31][6]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.465 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[12][5]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.465 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[12][7]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.465 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[12][1]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.465 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[12][4]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.465 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[12][3]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.485 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[21][0]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.485 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[21][6]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.485 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[21][5]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.485 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[21][7]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.485 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[21][1]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.485 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[21][4]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.485 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[21][3]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.485 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[21][2]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.485 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[9][3]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.495 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[17][6]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.495 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[17][1]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.498 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[5][6]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.498 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[5][5]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.498 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[5][3]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.498 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[5][2]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.506 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[3][0]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.506 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[3][3]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.510 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[1][3]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.511 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[3][6]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.512 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[17][3]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.513 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|Q[5]              ; Clock    ;
+; N/A                                     ; None                                                ; -2.513 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[1][6]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.514 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[1][2]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.523 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[1][0]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.523 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[1][5]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.523 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[1][1]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.564 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[2][0]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.564 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[2][7]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.564 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[2][2]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.564 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[2][4]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.566 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[11][7]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.599 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[3][5]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.614 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[7][2]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.635 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[9][7]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.645 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[31][3]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.646 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[7][4]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.683 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[7][5]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.684 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[19][3]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.684 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[19][2]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.700 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[9][1]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.703 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[3][1]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.733 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[7][6]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.734 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[16][0]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.736 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[8][6]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.736 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[8][5]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.736 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[8][1]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.736 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[8][4]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.744 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[15][6]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.744 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[15][5]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.744 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[15][3]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.771 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[3][7]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.780 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[26][0]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.780 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[26][6]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.780 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[26][5]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.780 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[26][7]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.780 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[26][1]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.780 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[26][4]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.780 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[26][2]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.780 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[26][3]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.791 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|Q[1]              ; Clock    ;
+; N/A                                     ; None                                                ; -2.808 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[4][5]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.808 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[4][3]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.808 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[4][1]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.808 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[4][4]         ; Clock    ;
+; N/A                                     ; None                                                ; -2.828 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[13][6]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.844 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[28][5]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.844 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[28][7]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.844 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[28][4]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.845 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[31][0]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.860 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[28][0]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.860 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[28][6]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.860 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[28][1]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.860 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[28][3]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.860 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[28][2]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.865 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|Q[6]              ; Clock    ;
+; N/A                                     ; None                                                ; -2.869 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[16][5]        ; Clock    ;
+; N/A                                     ; None                                                ; -2.878 ns ; KEY[1] ; Datapath:DP|InitRam:modifiedRam|RAM[7][7]         ; Clock    ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;           ;        ;                                                   ;          ;
++-----------------------------------------+-----------------------------------------------------+-----------+--------+---------------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Tue Dec 22 16:49:09 2015
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Processor -c Processor --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "Clock" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "ClkDiv:clk|Clock" as buffer
+Info: Clock "Clock" has Internal fmax of 141.56 MHz between source register "Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3]" and destination register "Datapath:DP|InitRam:modifiedRam|Q[3]" (period= 7.064 ns)
+    Info: + Longest register to register delay is 6.824 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X32_Y16_N11; Fanout = 3; REG Node = 'Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3]'
+        Info: 2: + IC(0.604 ns) + CELL(0.521 ns) = 1.125 ns; Loc. = LCCOMB_X31_Y16_N16; Fanout = 74; COMB Node = 'Datapath:DP|InsCycOp:ICO|Multiplexer:mux2|oDat[3]~3'
+        Info: 3: + IC(1.478 ns) + CELL(0.521 ns) = 3.124 ns; Loc. = LCCOMB_X29_Y15_N8; Fanout = 1; COMB Node = 'Datapath:DP|InitRam:modifiedRam|Mux4~14'
+        Info: 4: + IC(0.868 ns) + CELL(0.178 ns) = 4.170 ns; Loc. = LCCOMB_X29_Y17_N4; Fanout = 1; COMB Node = 'Datapath:DP|InitRam:modifiedRam|Mux4~15'
+        Info: 5: + IC(0.879 ns) + CELL(0.178 ns) = 5.227 ns; Loc. = LCCOMB_X29_Y15_N18; Fanout = 1; COMB Node = 'Datapath:DP|InitRam:modifiedRam|Mux4~16'
+        Info: 6: + IC(0.291 ns) + CELL(0.178 ns) = 5.696 ns; Loc. = LCCOMB_X29_Y15_N12; Fanout = 1; COMB Node = 'Datapath:DP|InitRam:modifiedRam|Mux4~19'
+        Info: 7: + IC(0.854 ns) + CELL(0.178 ns) = 6.728 ns; Loc. = LCCOMB_X30_Y16_N20; Fanout = 1; COMB Node = 'Datapath:DP|InitRam:modifiedRam|Mux4~20'
+        Info: 8: + IC(0.000 ns) + CELL(0.096 ns) = 6.824 ns; Loc. = LCFF_X30_Y16_N21; Fanout = 3; REG Node = 'Datapath:DP|InitRam:modifiedRam|Q[3]'
+        Info: Total cell delay = 1.850 ns ( 27.11 % )
+        Info: Total interconnect delay = 4.974 ns ( 72.89 % )
+    Info: - Smallest clock skew is -0.001 ns
+        Info: + Shortest clock path from clock "Clock" to destination register is 6.488 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 2; CLK Node = 'Clock'
+            Info: 2: + IC(1.141 ns) + CELL(0.879 ns) = 3.046 ns; Loc. = LCFF_X13_Y11_N19; Fanout = 2; REG Node = 'ClkDiv:clk|Clock'
+            Info: 3: + IC(1.847 ns) + CELL(0.000 ns) = 4.893 ns; Loc. = CLKCTRL_G1; Fanout = 296; COMB Node = 'ClkDiv:clk|Clock~clkctrl'
+            Info: 4: + IC(0.993 ns) + CELL(0.602 ns) = 6.488 ns; Loc. = LCFF_X30_Y16_N21; Fanout = 3; REG Node = 'Datapath:DP|InitRam:modifiedRam|Q[3]'
+            Info: Total cell delay = 2.507 ns ( 38.64 % )
+            Info: Total interconnect delay = 3.981 ns ( 61.36 % )
+        Info: - Longest clock path from clock "Clock" to source register is 6.489 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 2; CLK Node = 'Clock'
+            Info: 2: + IC(1.141 ns) + CELL(0.879 ns) = 3.046 ns; Loc. = LCFF_X13_Y11_N19; Fanout = 2; REG Node = 'ClkDiv:clk|Clock'
+            Info: 3: + IC(1.847 ns) + CELL(0.000 ns) = 4.893 ns; Loc. = CLKCTRL_G1; Fanout = 296; COMB Node = 'ClkDiv:clk|Clock~clkctrl'
+            Info: 4: + IC(0.994 ns) + CELL(0.602 ns) = 6.489 ns; Loc. = LCFF_X32_Y16_N11; Fanout = 3; REG Node = 'Datapath:DP|InsCycOp:ICO|Register:PC_reg|Output[3]'
+            Info: Total cell delay = 2.507 ns ( 38.63 % )
+            Info: Total interconnect delay = 3.982 ns ( 61.37 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Micro setup delay of destination is -0.038 ns
+Info: tsu for register "Datapath:DP|InitRam:modifiedRam|RAM[13][0]" (data pin = "KEY[1]", clock pin = "Clock") is 4.197 ns
+    Info: + Longest pin to register delay is 10.719 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R21; Fanout = 49; PIN Node = 'KEY[1]'
+        Info: 2: + IC(6.560 ns) + CELL(0.178 ns) = 7.602 ns; Loc. = LCCOMB_X31_Y17_N8; Fanout = 6; COMB Node = 'Datapath:DP|InitRam:modifiedRam|RAM~2'
+        Info: 3: + IC(2.704 ns) + CELL(0.413 ns) = 10.719 ns; Loc. = LCFF_X30_Y17_N17; Fanout = 1; REG Node = 'Datapath:DP|InitRam:modifiedRam|RAM[13][0]'
+        Info: Total cell delay = 1.455 ns ( 13.57 % )
+        Info: Total interconnect delay = 9.264 ns ( 86.43 % )
+    Info: + Micro setup delay of destination is -0.038 ns
+    Info: - Shortest clock path from clock "Clock" to destination register is 6.484 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 2; CLK Node = 'Clock'
+        Info: 2: + IC(1.141 ns) + CELL(0.879 ns) = 3.046 ns; Loc. = LCFF_X13_Y11_N19; Fanout = 2; REG Node = 'ClkDiv:clk|Clock'
+        Info: 3: + IC(1.847 ns) + CELL(0.000 ns) = 4.893 ns; Loc. = CLKCTRL_G1; Fanout = 296; COMB Node = 'ClkDiv:clk|Clock~clkctrl'
+        Info: 4: + IC(0.989 ns) + CELL(0.602 ns) = 6.484 ns; Loc. = LCFF_X30_Y17_N17; Fanout = 1; REG Node = 'Datapath:DP|InitRam:modifiedRam|RAM[13][0]'
+        Info: Total cell delay = 2.507 ns ( 38.66 % )
+        Info: Total interconnect delay = 3.977 ns ( 61.34 % )
+Info: tco from clock "Clock" to destination pin "LEDG[4]" through register "Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[4]" is 13.169 ns
+    Info: + Longest clock path from clock "Clock" to source register is 6.483 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 2; CLK Node = 'Clock'
+        Info: 2: + IC(1.141 ns) + CELL(0.879 ns) = 3.046 ns; Loc. = LCFF_X13_Y11_N19; Fanout = 2; REG Node = 'ClkDiv:clk|Clock'
+        Info: 3: + IC(1.847 ns) + CELL(0.000 ns) = 4.893 ns; Loc. = CLKCTRL_G1; Fanout = 296; COMB Node = 'ClkDiv:clk|Clock~clkctrl'
+        Info: 4: + IC(0.988 ns) + CELL(0.602 ns) = 6.483 ns; Loc. = LCFF_X34_Y18_N1; Fanout = 18; REG Node = 'Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[4]'
+        Info: Total cell delay = 2.507 ns ( 38.67 % )
+        Info: Total interconnect delay = 3.976 ns ( 61.33 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Longest register to pin delay is 6.409 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X34_Y18_N1; Fanout = 18; REG Node = 'Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[4]'
+        Info: 2: + IC(3.549 ns) + CELL(2.860 ns) = 6.409 ns; Loc. = PIN_W22; Fanout = 0; PIN Node = 'LEDG[4]'
+        Info: Total cell delay = 2.860 ns ( 44.62 % )
+        Info: Total interconnect delay = 3.549 ns ( 55.38 % )
+Info: Longest tpd from source pin "KEY[2]" to destination pin "LEDR[8]" is 8.897 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.874 ns) = 0.874 ns; Loc. = PIN_T22; Fanout = 3; PIN Node = 'KEY[2]'
+    Info: 2: + IC(5.203 ns) + CELL(2.820 ns) = 8.897 ns; Loc. = PIN_R18; Fanout = 0; PIN Node = 'LEDR[8]'
+    Info: Total cell delay = 3.694 ns ( 41.52 % )
+    Info: Total interconnect delay = 5.203 ns ( 58.48 % )
+Info: th for register "Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[2]" (data pin = "SW[2]", clock pin = "Clock") is 4.053 ns
+    Info: + Longest clock path from clock "Clock" to destination register is 6.483 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 2; CLK Node = 'Clock'
+        Info: 2: + IC(1.141 ns) + CELL(0.879 ns) = 3.046 ns; Loc. = LCFF_X13_Y11_N19; Fanout = 2; REG Node = 'ClkDiv:clk|Clock'
+        Info: 3: + IC(1.847 ns) + CELL(0.000 ns) = 4.893 ns; Loc. = CLKCTRL_G1; Fanout = 296; COMB Node = 'ClkDiv:clk|Clock~clkctrl'
+        Info: 4: + IC(0.988 ns) + CELL(0.602 ns) = 6.483 ns; Loc. = LCFF_X34_Y18_N29; Fanout = 18; REG Node = 'Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[2]'
+        Info: Total cell delay = 2.507 ns ( 38.67 % )
+        Info: Total interconnect delay = 3.976 ns ( 61.33 % )
+    Info: + Micro hold delay of destination is 0.286 ns
+    Info: - Shortest pin to register delay is 2.716 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.036 ns) = 1.036 ns; Loc. = PIN_M22; Fanout = 2; PIN Node = 'SW[2]'
+        Info: 2: + IC(1.267 ns) + CELL(0.413 ns) = 2.716 ns; Loc. = LCFF_X34_Y18_N29; Fanout = 18; REG Node = 'Datapath:DP|InsSetOp:ISO|Register:A_reg|Output[2]'
+        Info: Total cell delay = 1.449 ns ( 53.35 % )
+        Info: Total interconnect delay = 1.267 ns ( 46.65 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 163 megabytes
+    Info: Processing ended: Tue Dec 22 16:49:10 2015
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

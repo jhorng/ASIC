@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Processor
-Mon Dec 21 21:47:22 2015
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue Dec 22 16:48:33 2015
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
 ---------------------
@@ -29,17 +29,15 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  21. Parameter Settings for User Entity Instance: Datapath:DP|InsSetOp:ISO|Register:A_reg
  22. Parameter Settings for User Entity Instance: Datapath:DP|InsSetOp:ISO|AddSub:AS
  23. Port Connectivity Checks: "Datapath:DP|InsSetOp:ISO|Multiplexer:mux3_2"
- 24. Port Connectivity Checks: "ControlUnit:CU"
- 25. Elapsed Time Per Partition
- 26. Analysis & Synthesis Messages
- 27. Analysis & Synthesis Suppressed Messages
+ 24. Analysis & Synthesis Messages
+ 25. Analysis & Synthesis Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
+Copyright (C) 1991-2009 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -55,24 +53,24 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec 21 21:47:22 2015           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; Processor                                       ;
-; Top-level Entity Name              ; Processor                                       ;
-; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 578                                             ;
-;     Total combinational functions  ; 329                                             ;
-;     Dedicated logic registers      ; 329                                             ;
-; Total registers                    ; 329                                             ;
-; Total pins                         ; 33                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
-+------------------------------------+-------------------------------------------------+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++------------------------------------+-----------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Dec 22 16:48:33 2015   ;
+; Quartus II Version                 ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
+; Revision Name                      ; Processor                               ;
+; Top-level Entity Name              ; Processor                               ;
+; Family                             ; Cyclone II                              ;
+; Total logic elements               ; 579                                     ;
+;     Total combinational functions  ; 330                                     ;
+;     Dedicated logic registers      ; 329                                     ;
+; Total registers                    ; 329                                     ;
+; Total pins                         ; 33                                      ;
+; Total virtual pins                 ; 0                                       ;
+; Total memory bits                  ; 0                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                       ;
+; Total PLLs                         ; 0                                       ;
++------------------------------------+-----------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -82,7 +80,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C20F484C7       ;                    ;
 ; Top-level entity name                                                      ; Processor          ; Processor          ;
-; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Family name                                                                ; Cyclone II         ; Stratix II         ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -100,7 +98,6 @@ applicable agreement for further details.
 ; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
 ; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
 ; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
 ; Parallel Synthesis                                                         ; On                 ; On                 ;
 ; DSP Block Balancing                                                        ; Auto               ; Auto               ;
 ; NOT Gate Push-Back                                                         ; On                 ; On                 ;
@@ -122,7 +119,6 @@ applicable agreement for further details.
 ; Auto ROM Replacement                                                       ; On                 ; On                 ;
 ; Auto RAM Replacement                                                       ; On                 ; On                 ;
 ; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
 ; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
 ; Strict RAM Replacement                                                     ; Off                ; Off                ;
 ; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
@@ -135,16 +131,13 @@ applicable agreement for further details.
 ; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
 ; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
 ; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
-; Report Parameter Settings                                                  ; On                 ; On                 ;
-; Report Source Assignments                                                  ; On                 ; On                 ;
-; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
 ; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
 ; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
 ; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
 ; HDL message level                                                          ; Level2             ; Level2             ;
 ; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 100                ; 100                ;
 ; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
 ; Clock MUX Protection                                                       ; On                 ; On                 ;
 ; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
@@ -152,48 +145,40 @@ applicable agreement for further details.
 ; SDC constraint protection                                                  ; Off                ; Off                ;
 ; Synthesis Effort                                                           ; Auto               ; Auto               ;
 ; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
 ; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
 ; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
 ; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
-; Synthesis Seed                                                             ; 1                  ; 1                  ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                     ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                       ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
-; ClkDiv.v                         ; yes             ; User Verilog HDL File  ; C:/Users/Prince/Desktop/ASIC/Lab2/Processor/Hardware/ClkDiv.v      ;         ;
-; Register.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Prince/Desktop/ASIC/Lab2/Processor/Hardware/Register.v    ;         ;
-; Processor.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Prince/Desktop/ASIC/Lab2/Processor/Hardware/Processor.v   ;         ;
-; Multiplexer.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Prince/Desktop/ASIC/Lab2/Processor/Hardware/Multiplexer.v ;         ;
-; InsSetOp.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Prince/Desktop/ASIC/Lab2/Processor/Hardware/InsSetOp.v    ;         ;
-; InsCycOp.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Prince/Desktop/ASIC/Lab2/Processor/Hardware/InsCycOp.v    ;         ;
-; InitRam.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Prince/Desktop/ASIC/Lab2/Processor/Hardware/InitRam.v     ;         ;
-; Increment.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Prince/Desktop/ASIC/Lab2/Processor/Hardware/Increment.v   ;         ;
-; Datapath.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Prince/Desktop/ASIC/Lab2/Processor/Hardware/Datapath.v    ;         ;
-; ControlUnit.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Prince/Desktop/ASIC/Lab2/Processor/Hardware/ControlUnit.v ;         ;
-; AddSub.v                         ; yes             ; User Verilog HDL File  ; C:/Users/Prince/Desktop/ASIC/Lab2/Processor/Hardware/AddSub.v      ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                            ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                        ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+
+; ClkDiv.v                         ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/ASIC/Lab2/Processor/Hardware/ClkDiv.v      ;
+; Register.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/ASIC/Lab2/Processor/Hardware/Register.v    ;
+; Processor.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/ASIC/Lab2/Processor/Hardware/Processor.v   ;
+; Multiplexer.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/ASIC/Lab2/Processor/Hardware/Multiplexer.v ;
+; InsSetOp.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/ASIC/Lab2/Processor/Hardware/InsSetOp.v    ;
+; InsCycOp.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/ASIC/Lab2/Processor/Hardware/InsCycOp.v    ;
+; InitRam.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/ASIC/Lab2/Processor/Hardware/InitRam.v     ;
+; Increment.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/ASIC/Lab2/Processor/Hardware/Increment.v   ;
+; Datapath.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/ASIC/Lab2/Processor/Hardware/Datapath.v    ;
+; ControlUnit.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/ASIC/Lab2/Processor/Hardware/ControlUnit.v ;
+; AddSub.v                         ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/ASIC/Lab2/Processor/Hardware/AddSub.v      ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------+
@@ -201,16 +186,16 @@ applicable agreement for further details.
 +---------------------------------------------+------------------+
 ; Resource                                    ; Usage            ;
 +---------------------------------------------+------------------+
-; Estimated Total logic elements              ; 578              ;
+; Estimated Total logic elements              ; 579              ;
 ;                                             ;                  ;
-; Total combinational functions               ; 329              ;
+; Total combinational functions               ; 330              ;
 ; Logic element usage by number of LUT inputs ;                  ;
 ;     -- 4 input functions                    ; 235              ;
-;     -- 3 input functions                    ; 24               ;
-;     -- <=2 input functions                  ; 70               ;
+;     -- 3 input functions                    ; 26               ;
+;     -- <=2 input functions                  ; 69               ;
 ;                                             ;                  ;
 ; Logic elements by mode                      ;                  ;
-;     -- normal mode                          ; 286              ;
+;     -- normal mode                          ; 287              ;
 ;     -- arithmetic mode                      ; 43               ;
 ;                                             ;                  ;
 ; Total registers                             ; 329              ;
@@ -218,10 +203,9 @@ applicable agreement for further details.
 ;     -- I/O registers                        ; 0                ;
 ;                                             ;                  ;
 ; I/O pins                                    ; 33               ;
-; Embedded Multiplier 9-bit elements          ; 0                ;
 ; Maximum fan-out node                        ; ClkDiv:clk|Clock ;
 ; Maximum fan-out                             ; 297              ;
-; Total fan-out                               ; 2198             ;
+; Total fan-out                               ; 2204             ;
 ; Average fan-out                             ; 3.18             ;
 +---------------------------------------------+------------------+
 
@@ -231,18 +215,18 @@ applicable agreement for further details.
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Library Name ;
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+--------------+
-; |Processor                  ; 329 (1)           ; 329 (0)      ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |Processor                                           ; work         ;
-;    |ClkDiv:clk|             ; 42 (42)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ClkDiv:clk                                ; work         ;
-;    |ControlUnit:CU|         ; 18 (18)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ControlUnit:CU                            ; work         ;
-;    |Datapath:DP|            ; 268 (0)           ; 285 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP                               ; work         ;
-;       |InitRam:modifiedRam| ; 233 (233)         ; 264 (264)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP|InitRam:modifiedRam           ; work         ;
-;       |InsCycOp:ICO|        ; 10 (0)            ; 13 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP|InsCycOp:ICO                  ; work         ;
-;          |Multiplexer:mux2| ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP|InsCycOp:ICO|Multiplexer:mux2 ; work         ;
-;          |Register:IR_reg|  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP|InsCycOp:ICO|Register:IR_reg  ; work         ;
-;          |Register:PC_reg|  ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP|InsCycOp:ICO|Register:PC_reg  ; work         ;
-;       |InsSetOp:ISO|        ; 25 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP|InsSetOp:ISO                  ; work         ;
-;          |AddSub:AS|        ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP|InsSetOp:ISO|AddSub:AS        ; work         ;
-;          |Register:A_reg|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP|InsSetOp:ISO|Register:A_reg   ; work         ;
+; |Processor                  ; 330 (2)           ; 329 (0)      ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |Processor                                           ; work         ;
+;    |ClkDiv:clk|             ; 43 (43)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ClkDiv:clk                                ;              ;
+;    |ControlUnit:CU|         ; 17 (17)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ControlUnit:CU                            ;              ;
+;    |Datapath:DP|            ; 268 (0)           ; 285 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP                               ;              ;
+;       |InitRam:modifiedRam| ; 233 (233)         ; 264 (264)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP|InitRam:modifiedRam           ;              ;
+;       |InsCycOp:ICO|        ; 10 (0)            ; 13 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP|InsCycOp:ICO                  ;              ;
+;          |Multiplexer:mux2| ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP|InsCycOp:ICO|Multiplexer:mux2 ;              ;
+;          |Register:IR_reg|  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP|InsCycOp:ICO|Register:IR_reg  ;              ;
+;          |Register:PC_reg|  ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP|InsCycOp:ICO|Register:PC_reg  ;              ;
+;       |InsSetOp:ISO|        ; 25 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP|InsSetOp:ISO                  ;              ;
+;          |AddSub:AS|        ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP|InsSetOp:ISO|AddSub:AS        ;              ;
+;          |Register:A_reg|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|Datapath:DP|InsSetOp:ISO|Register:A_reg   ;              ;
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -342,7 +326,7 @@ Encoding Type:  One-Hot
 ; jpos           ; 1110  ; Unsigned Binary                    ;
 ; halt           ; 1111  ; Unsigned Binary                    ;
 +----------------+-------+------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------+
@@ -352,7 +336,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------------------+
 ; width          ; 8     ; Signed Integer                                               ;
 +----------------+-------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------------------------------------------+
@@ -363,7 +347,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; width          ; 5     ; Signed Integer                                                ;
 ; sel            ; 1     ; Signed Integer                                                ;
 +----------------+-------+---------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------------------------------+
@@ -373,7 +357,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------+
 ; width          ; 5     ; Signed Integer                                              ;
 +----------------+-------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------+
@@ -383,7 +367,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------------------+
 ; width          ; 5     ; Signed Integer                                               ;
 +----------------+-------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------------------------------------------+
@@ -394,7 +378,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; width          ; 5     ; Signed Integer                                                ;
 ; sel            ; 1     ; Signed Integer                                                ;
 +----------------+-------+---------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------------------------+
@@ -405,7 +389,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; width          ; 8     ; Signed Integer                                                  ;
 ; sel            ; 1     ; Signed Integer                                                  ;
 +----------------+-------+-----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------------------------+
@@ -416,7 +400,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; width          ; 8     ; Signed Integer                                                  ;
 ; sel            ; 1     ; Signed Integer                                                  ;
 +----------------+-------+-----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------------------------------------------+
@@ -427,7 +411,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; width          ; 8     ; Signed Integer                                                ;
 ; sel            ; 1     ; Signed Integer                                                ;
 +----------------+-------+---------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------------------------------+
@@ -437,7 +421,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------+
 ; width          ; 8     ; Signed Integer                                              ;
 +----------------+-------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------+
@@ -447,7 +431,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------------+
 ; width          ; 8     ; Signed Integer                                         ;
 +----------------+-------+--------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------------------+
@@ -459,97 +443,75 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+----------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ControlUnit:CU"                                                                     ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Halt ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:03     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Dec 21 21:47:16 2015
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Tue Dec 22 16:48:31 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor
-Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
-Info (12021): Found 1 design units, including 1 entities, in source file clkdiv.v
-    Info (12023): Found entity 1: ClkDiv
-Info (12021): Found 1 design units, including 1 entities, in source file register.v
-    Info (12023): Found entity 1: Register
-Info (12021): Found 1 design units, including 1 entities, in source file processor.v
-    Info (12023): Found entity 1: Processor
-Info (12021): Found 1 design units, including 1 entities, in source file multiplexer.v
-    Info (12023): Found entity 1: Multiplexer
-Info (12021): Found 1 design units, including 1 entities, in source file inssetop.v
-    Info (12023): Found entity 1: InsSetOp
-Info (12021): Found 1 design units, including 1 entities, in source file inscycop.v
-    Info (12023): Found entity 1: InsCycOp
-Info (12021): Found 1 design units, including 1 entities, in source file initram.v
-    Info (12023): Found entity 1: InitRam
-Info (12021): Found 1 design units, including 1 entities, in source file increment.v
-    Info (12023): Found entity 1: Increment
-Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
-    Info (12023): Found entity 1: Datapath
-Info (12021): Found 1 design units, including 1 entities, in source file controlunit.v
-    Info (12023): Found entity 1: ControlUnit
-Info (12021): Found 1 design units, including 1 entities, in source file addsub.v
-    Info (12023): Found entity 1: AddSub
-Warning (10236): Verilog HDL Implicit Net warning at Processor.v(29): created implicit net for "Clk_1hz"
-Info (12127): Elaborating entity "Processor" for the top level hierarchy
-Warning (10034): Output port "LEDR[9..8]" at Processor.v(12) has no driver
-Info (12128): Elaborating entity "ClkDiv" for hierarchy "ClkDiv:clk"
-Warning (10036): Verilog HDL or VHDL warning at ClkDiv.v(6): object "value" assigned a value but never read
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:CU"
-Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:DP"
-Info (12128): Elaborating entity "InsCycOp" for hierarchy "Datapath:DP|InsCycOp:ICO"
-Info (12128): Elaborating entity "Register" for hierarchy "Datapath:DP|InsCycOp:ICO|Register:IR_reg"
-Info (12128): Elaborating entity "Multiplexer" for hierarchy "Datapath:DP|InsCycOp:ICO|Multiplexer:mux1"
-Info (12128): Elaborating entity "Increment" for hierarchy "Datapath:DP|InsCycOp:ICO|Increment:Incr"
+Info: Found 1 design units, including 1 entities, in source file clkdiv.v
+    Info: Found entity 1: ClkDiv
+Info: Found 1 design units, including 1 entities, in source file register.v
+    Info: Found entity 1: Register
+Info: Found 1 design units, including 1 entities, in source file processor.v
+    Info: Found entity 1: Processor
+Info: Found 1 design units, including 1 entities, in source file multiplexer.v
+    Info: Found entity 1: Multiplexer
+Info: Found 1 design units, including 1 entities, in source file inssetop.v
+    Info: Found entity 1: InsSetOp
+Info: Found 1 design units, including 1 entities, in source file inscycop.v
+    Info: Found entity 1: InsCycOp
+Info: Found 1 design units, including 1 entities, in source file initram.v
+    Info: Found entity 1: InitRam
+Info: Found 1 design units, including 1 entities, in source file increment.v
+    Info: Found entity 1: Increment
+Info: Found 1 design units, including 1 entities, in source file datapath.v
+    Info: Found entity 1: Datapath
+Info: Found 1 design units, including 1 entities, in source file controlunit.v
+    Info: Found entity 1: ControlUnit
+Info: Found 1 design units, including 1 entities, in source file addsub.v
+    Info: Found entity 1: AddSub
+Warning (10236): Verilog HDL Implicit Net warning at Processor.v(31): created implicit net for "Clk_1hz"
+Info: Elaborating entity "Processor" for the top level hierarchy
+Info: Elaborating entity "ClkDiv" for hierarchy "ClkDiv:clk"
+Info: Elaborating entity "ControlUnit" for hierarchy "ControlUnit:CU"
+Info: Elaborating entity "Datapath" for hierarchy "Datapath:DP"
+Info: Elaborating entity "InsCycOp" for hierarchy "Datapath:DP|InsCycOp:ICO"
+Info: Elaborating entity "Register" for hierarchy "Datapath:DP|InsCycOp:ICO|Register:IR_reg"
+Info: Elaborating entity "Multiplexer" for hierarchy "Datapath:DP|InsCycOp:ICO|Multiplexer:mux1"
+Info: Elaborating entity "Increment" for hierarchy "Datapath:DP|InsCycOp:ICO|Increment:Incr"
 Warning (10230): Verilog HDL assignment warning at Increment.v(8): truncated value with size 32 to match size of target (5)
-Info (12128): Elaborating entity "Register" for hierarchy "Datapath:DP|InsCycOp:ICO|Register:PC_reg"
-Info (12128): Elaborating entity "InitRam" for hierarchy "Datapath:DP|InitRam:modifiedRam"
-Info (12128): Elaborating entity "InsSetOp" for hierarchy "Datapath:DP|InsSetOp:ISO"
-Info (12128): Elaborating entity "Multiplexer" for hierarchy "Datapath:DP|InsSetOp:ISO|Multiplexer:mux3_2"
-Info (12128): Elaborating entity "AddSub" for hierarchy "Datapath:DP|InsSetOp:ISO|AddSub:AS"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[8]" is stuck at GND
-    Warning (13410): Pin "LEDR[9]" is stuck at GND
-Info (17049): 4 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/Prince/Desktop/ASIC/Lab2/Processor/Hardware/output_files/Processor.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
+Info: Elaborating entity "Register" for hierarchy "Datapath:DP|InsCycOp:ICO|Register:PC_reg"
+Info: Elaborating entity "InitRam" for hierarchy "Datapath:DP|InitRam:modifiedRam"
+Info: Elaborating entity "InsSetOp" for hierarchy "Datapath:DP|InsSetOp:ISO"
+Info: Elaborating entity "Multiplexer" for hierarchy "Datapath:DP|InsSetOp:ISO|Multiplexer:mux3_2"
+Info: Elaborating entity "AddSub" for hierarchy "Datapath:DP|InsSetOp:ISO|AddSub:AS"
+Info: 4 registers lost all their fanouts during netlist optimizations. The first 4 are displayed below.
+    Info: Register "ControlUnit:CU|state~4" lost all its fanouts during netlist optimizations.
+    Info: Register "ControlUnit:CU|state~5" lost all its fanouts during netlist optimizations.
+    Info: Register "ControlUnit:CU|state~6" lost all its fanouts during netlist optimizations.
+    Info: Register "ControlUnit:CU|state~7" lost all its fanouts during netlist optimizations.
+Info: Generated suppressed messages file C:/Users/Student/Desktop/ASIC/Lab2/Processor/Hardware/output_files/Processor.map.smsg
+Warning: Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[8]"
     Warning (15610): No output dependent on input pin "SW[9]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 627 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 594 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 490 megabytes
-    Info: Processing ended: Mon Dec 21 21:47:22 2015
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Implemented 628 device resources after synthesis - the final resource count might be different
+    Info: Implemented 15 input pins
+    Info: Implemented 18 output pins
+    Info: Implemented 595 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 200 megabytes
+    Info: Processing ended: Tue Dec 22 16:48:33 2015
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Prince/Desktop/ASIC/Lab2/Processor/Hardware/output_files/Processor.map.smsg.
+The suppressed messages can be found in C:/Users/Student/Desktop/ASIC/Lab2/Processor/Hardware/output_files/Processor.map.smsg.
 
 

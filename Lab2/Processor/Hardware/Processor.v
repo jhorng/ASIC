@@ -16,14 +16,16 @@ module Processor(
 	wire Reset;
 	wire Enter, Enable, IRload, JMPmux, PCload, Meminst, MemWr, Aload, Sub, Aeq0, Apos, Halt;
 	wire [1:0]Asel;
-   wire [7:0]Input, Output;
+    wire [7:0]Input, Output;
 	wire [7:5]IR;
 
   assign Input = SW[7:0];
-  assign Reset = KEY[0];
-  assign Enable = KEY[1];
-  assign Enter = KEY[2];
+  assign Reset = ~KEY[0];
+  assign Enable = ~KEY[1];
+  assign Enter = ~KEY[2];
   assign LEDR[7:0] = Input;
+  assign LEDR[8] = Enter;
+  assign LEDR[9] = Halt;
   assign LEDG = Output;
   
   ClkDiv clk (Clock, Clk_1hz);
